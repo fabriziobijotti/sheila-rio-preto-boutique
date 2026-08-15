@@ -438,7 +438,7 @@ function LojaPage() {
               className="aspect-[4/3] w-full rounded-4xl object-cover shadow-card"
             />
             <a
-              href={loja.maps.rota}
+              href={loja.maps.search}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative overflow-hidden rounded-4xl border border-border shadow-card"
