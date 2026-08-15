@@ -1,0 +1,172 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — Sheila Oliveira Store
+ * Rosa claro, creme, off-white, detalhes em rosa/vermelho Sheila.
+ * Títulos serifados (Cormorant Garamond), textos em Jost.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-cream: var(--cream);
+  --color-blush: var(--blush);
+  --color-rose: var(--rose);
+  --color-pink: var(--pink);
+  --color-blue: var(--blue);
+  --color-butter: var(--butter);
+  --color-mint-soft: var(--mint-soft);
+  --color-cream-soft: var(--cream-soft);
+  --color-sand-soft: var(--sand-soft);
+  --color-mist: var(--mist);
+  --color-sage: var(--sage);
+  --color-sheila: var(--sheila);
+  --color-sheila-soft: var(--sheila-soft);
+  --color-ink: var(--ink);
+  --shadow-soft: 0 18px 50px -24px color-mix(in oklab, var(--sheila) 28%, transparent);
+  --shadow-card: 0 10px 30px -18px color-mix(in oklab, var(--ink) 22%, transparent);
+}
+
+:root {
+  --radius: 1.25rem;
+  --background: #f8f5f1;
+  --foreground: #4a3b33;
+  --card: #fdfbf8;
+  --card-foreground: #4a3b33;
+  --popover: #fdfbf8;
+  --popover-foreground: #4a3b33;
+  --primary: #bb3f58;
+  --primary-foreground: #f8f5f1;
+  --secondary: #f2e8d6;
+  --secondary-foreground: #4a3b33;
+  --muted: #f2e8d6;
+  --muted-foreground: #8a7568;
+  --accent: #fce2e4;
+  --accent-foreground: #9a2f46;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #f8f5f1;
+  --border: #e8ded2;
+  --input: #e8ded2;
+  --ring: #bb3f58;
+  --cream: #f2e8d6;
+  --blush: #fce2e4;
+  --rose: #f6cdd2;
+  --mist: #e1edf3;
+  --sage: #e5f0dd;
+  --sheila: #bb3f58;
+  --sheila-soft: #d8798c;
+  --pink: #fce2e4;
+  --blue: #e1edf3;
+  --butter: #f7edcd;
+  --mint-soft: #e5f0dd;
+  --cream-soft: #faf5ec;
+  --sand-soft: #f3ece2;
+  --ink: #4a3b33;
+}
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-sheila);
+}
+
+@utility btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.9rem 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@utility btn-primary {
+  background-color: var(--color-sheila);
+  color: var(--color-primary-foreground);
+  &:hover {
+    background-color: color-mix(in oklab, var(--color-sheila) 88%, black);
+  }
+}
+
+@utility btn-outline {
+  border: 1px solid color-mix(in oklab, var(--color-sheila) 45%, transparent);
+  color: var(--color-sheila);
+  background-color: color-mix(in oklab, var(--color-blush) 60%, transparent);
+  &:hover {
+    background-color: var(--color-blush);
+  }
+}
+
+@utility btn-ghost-light {
+  border: 1px solid color-mix(in oklab, var(--color-cream) 70%, transparent);
+  color: var(--color-primary-foreground);
+  &:hover {
+    background-color: color-mix(in oklab, var(--color-cream) 22%, transparent);
+  }
+}
