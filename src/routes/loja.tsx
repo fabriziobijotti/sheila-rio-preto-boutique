@@ -459,10 +459,8 @@ function LojaPage() {
                 decoding="async"
                  className="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />
-              <span className="absolute inset-0 flex items-center justify-center bg-ink/30 transition-colors group-hover:bg-ink/40">
-                <span className="btn-base btn-primary px-5 py-2.5 text-xs shadow-soft">
-                  📍 Abrir no Google Maps
-                </span>
+              <span className="btn-base btn-primary absolute bottom-5 left-1/2 -translate-x-1/2 px-5 py-2.5 text-xs shadow-soft">
+                📍 Abrir no Google Maps
               </span>
             </a>
           </div>
