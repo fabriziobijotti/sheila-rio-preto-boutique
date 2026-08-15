@@ -347,7 +347,7 @@ function LojaPage() {
                   rel="noopener noreferrer"
                   className="btn-base btn-outline shrink-0 px-4 py-2 text-xs"
                 >
-                  Quero experimentar
+                  Ver disponibilidade no provador
                 </a>
               </div>
             </article>
