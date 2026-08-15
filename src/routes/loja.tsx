@@ -487,48 +487,8 @@ function LojaPage() {
         </div>
       </section>
 
-      {/* 9. Prova local */}
-      <section className="bg-[#f7f0d1] py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
-          <div>
-            <p className="eyebrow">Prova local</p>
-            <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
-              Uma loja de Rio Preto feita para mulheres reais
-            </h2>
-            <p className="mt-5 text-[0.98rem] leading-relaxed text-muted-foreground">
-              Na Sheila Oliveira Store, cada cliente pode experimentar, combinar e
-              encontrar peças para diferentes momentos da vida — do look do dia a dia à
-              produção para uma ocasião especial.
-            </p>
-            <a
-              href={loja.maps.rota}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-base btn-outline mt-7"
-            >
-              📍 Quero visitar a loja
-            </a>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src={provador}
-              alt="Cliente experimentando peças na Sheila Oliveira Store"
-              width={1408}
-              height={1008}
-              loading="lazy"
-              className="aspect-[3/4] w-full rounded-3xl object-cover shadow-card"
-            />
-            <img
-              src={vitrineManequins.url}
-              alt="Ambiente da loja feminina em São José do Rio Preto"
-              width={1600}
-              height={1200}
-              loading="lazy"
-              className="mt-8 aspect-[3/4] w-full rounded-3xl object-cover shadow-card"
-            />
-          </div>
-        </div>
-      </section>
+
+
 
       {/* 10. CTA final */}
       <section className="bg-mint-soft py-20 text-ink">
