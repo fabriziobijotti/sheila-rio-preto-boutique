@@ -114,12 +114,12 @@ const categorias = [
     msg: MSG_PROVADOR,
   },
   {
-    nome: "Looks casuais",
+    nome: "Looks Casuais",
     img: lookCasual.url,
     msg: MSG_PROVADOR,
   },
   {
-    nome: "Peças versáteis",
+    nome: "Peças Versáteis",
     img: lookVersatil.url,
     msg: MSG_PROVADOR,
   },
@@ -155,32 +155,9 @@ const faq = [
 function LojaPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* 1. Barra promocional */}
-      <div className="sticky top-0 z-40 bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2.5 sm:flex sm:justify-between">
-          <p className="min-w-0 text-[0.78rem] leading-snug tracking-wide sm:text-sm">
-            🎁 <span className="font-medium">PRESENTÃO PRIMAVERA-VERÃO:</span> nas
-            compras a partir de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa
-            exclusiva.
-          </p>
-          <a
-            href={wa(MSG_PRESENTE)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-base btn-ghost-light shrink-0 px-4 py-1.5 text-[0.72rem] sm:text-xs"
-          >
-            Quero garantir meu presente
-          </a>
-        </div>
-        <p className="mx-auto max-w-6xl px-4 pb-2 text-[0.65rem] tracking-wide text-primary-foreground/70">
-          Promoção válida enquanto durarem os estoques. Consulte condições na loja.
-          {loja.campanha.periodo ? ` ${loja.campanha.periodo}.` : ""}
-        </p>
-      </div>
-
-      {/* 2. Hero */}
+      {/* 1. Hero */}
       <header className="bg-pink">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-20 lg:grid-cols-2 lg:gap-16 lg:pb-20 lg:pt-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
           <div>
             <p className="eyebrow">
               LOJA FÍSICA EM SÃO JOSÉ DO RIO PRETO • DESDE 2014
@@ -340,8 +317,10 @@ function LojaPage() {
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
-              <div className="flex flex-col items-start gap-3 p-5">
-                <h3 className="text-xl text-ink lg:text-2xl">{c.nome}</h3>
+              <div className="flex min-w-0 flex-col items-stretch gap-3 p-5">
+                <h3 className="w-full whitespace-normal break-words text-xl leading-snug text-ink lg:text-2xl">
+                  {c.nome}
+                </h3>
                 <a
                   href={wa(c.msg)}
                   target="_blank"
