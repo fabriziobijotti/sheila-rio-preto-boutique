@@ -182,22 +182,19 @@ function LojaPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
           <div>
             <p className="eyebrow">
-              {loja.nome} • São José do Rio Preto
+              LOJA FÍSICA EM SÃO JOSÉ DO RIO PRETO • DESDE 2014
             </p>
             <h1 className="mt-5 text-4xl leading-[1.08] text-ink sm:text-5xl lg:text-6xl">
-              Seu novo look de <em className="italic text-sheila">Primavera-Verão</em>{" "}
-              está aqui
+              Prove antes. Sinta o caimento. Leve com total certeza.
             </h1>
             <p className="mt-6 max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground">
-              Venha conhecer de perto a nova coleção da Sheila Oliveira Store. Looks
-              femininos, leves e versáteis para você experimentar, combinar e escolher
-              com atendimento personalizado.
+              Nada substitui experimentar no seu corpo. Venha conhecer a Sheila Oliveira
+              Store na Bernardino de Campos e receba atendimento consultivo para
+              encontrar peças que realmente valorizam você.
             </p>
             <p className="mt-6 inline-flex items-start gap-2 rounded-2xl bg-blush px-4 py-3 text-sm text-ink">
               <span aria-hidden="true">📍</span>
-              <span>
-                {loja.endereco} — {loja.cidade}
-              </span>
+              <span>Rua Bernardino de Campos, 3465 - Loja 1 (Centro / SJRP)</span>
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
@@ -206,20 +203,19 @@ function LojaPage() {
                 rel="noopener noreferrer"
                 className="btn-base btn-primary"
               >
-                📍 Quero visitar a loja
+                📍 Traçar Rota no Google Maps
               </a>
               <a
-                href={wa(MSG_LOOKS)}
+                href={wa(MSG_VISITA)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-base btn-outline"
               >
-                💬 Ver looks pelo WhatsApp
+                💬 Avisar que Estou Indo no WhatsApp
               </a>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-              Não consegue vir até a loja? Também fazemos entregas em São José do Rio
-              Preto e região.
+              Atendimento consultivo e provador disponível para você experimentar com calma.
             </p>
           </div>
           <div className="relative">
