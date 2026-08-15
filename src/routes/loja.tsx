@@ -209,7 +209,8 @@ function LojaPage() {
               alt="Araras com peças da nova coleção na loja"
               width={1408}
               height={1008}
-              loading="lazy"
+              loading="eager"
+              decoding="async"
               className="absolute -bottom-8 -left-4 hidden w-44 rounded-3xl border-4 border-cream object-cover shadow-card lg:block"
             />
           </div>
@@ -245,7 +246,8 @@ function LojaPage() {
               alt="Atendente ajudando cliente a escolher um vestido no provador"
               width={1408}
               height={1008}
-              loading="lazy"
+              loading="eager"
+              decoding="async"
               className="col-span-2 aspect-[4/3] w-full rounded-4xl object-cover shadow-card"
             />
             <img
@@ -253,7 +255,8 @@ function LojaPage() {
               alt="Vitrine da Sheila Oliveira Store com manequins e looks da coleção"
               width={1600}
               height={1200}
-              loading="lazy"
+              loading="eager"
+              decoding="async"
               className="aspect-square w-full rounded-3xl object-cover shadow-card"
             />
             <img
@@ -261,7 +264,8 @@ function LojaPage() {
               alt="Araras de roupas femininas na loja de Rio Preto"
               width={1408}
               height={1008}
-              loading="lazy"
+              loading="eager"
+              decoding="async"
               className="aspect-square w-full rounded-3xl object-cover shadow-card"
             />
           </div>
@@ -314,7 +318,8 @@ function LojaPage() {
                 alt={`${c.nome} da coleção Primavera-Verão na Sheila Oliveira Store`}
                 width={1008}
                 height={1312}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover"
               />
               <div className="flex flex-col items-stretch gap-3 p-5">
@@ -344,7 +349,8 @@ function LojaPage() {
             alt="Mini Bolsa Exclusiva Primavera-Verão"
             width={1200}
             height={1200}
-            loading="lazy"
+            loading="eager"
+            decoding="async"
             className="aspect-square w-full rounded-4xl object-cover shadow-soft"
           />
           <div>
@@ -434,7 +440,8 @@ function LojaPage() {
               alt="Fachada da Sheila Oliveira Store na Bernardino de Campos, 3465"
               width={1600}
               height={1200}
-              loading="lazy"
+              loading="eager"
+              decoding="async"
               className="aspect-[4/3] w-full rounded-4xl object-cover shadow-card"
             />
             <a
@@ -448,7 +455,8 @@ function LojaPage() {
                 alt="Localização da Sheila Oliveira Store na Rua Bernardino de Campos, 3465"
                 width={1024}
                 height={768}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <span className="absolute inset-0 flex items-center justify-center bg-ink/30 transition-colors group-hover:bg-ink/40">
@@ -601,7 +609,8 @@ function LojaPage() {
             alt="Fachada da Sheila Oliveira Store"
             width={1600}
             height={1200}
-            loading="lazy"
+            loading="eager"
+            decoding="async"
             className="aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
           />
         </div>
