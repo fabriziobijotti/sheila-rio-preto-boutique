@@ -12,9 +12,9 @@ import lookCasual from "@/assets/look-casual.png.asset.json";
 import lookVersatil from "@/assets/look-versatil.png.asset.json";
 import { loja, wa } from "@/lib/loja-config";
 
-const TITLE = "Moda Feminina em São José do Rio Preto | Sheila Oliveira Store";
+const TITLE = "Loja Física de Moda Feminina em São José do Rio Preto | Sheila Oliveira Store";
 const DESC =
-  "Conheça a Sheila Oliveira Store em São José do Rio Preto. Nova Coleção Primavera-Verão, atendimento personalizado, loja física e entregas para Rio Preto e região.";
+  "Visite a Sheila Oliveira Store na Rua Bernardino de Campos, 3465, em São José do Rio Preto. Atendimento consultivo, provador e peças que vestem bem de verdade.";
 
 export const Route = createFileRoute("/loja")({
   head: () => ({
@@ -30,8 +30,8 @@ export const Route = createFileRoute("/loja")({
       { name: "twitter:description", content: DESC },
       {
         name: "keywords",
-        content:
-          "loja de roupas femininas em São José do Rio Preto, moda feminina São José do Rio Preto, loja feminina Rio Preto, roupas femininas Rio Preto, coleção primavera verão Rio Preto",
+          content:
+            "loja física de roupas femininas em São José do Rio Preto, provador em Rio Preto, atendimento consultivo de moda, loja feminina centro Rio Preto, Sheila Oliveira Store, moda feminina Rio Preto",
       },
     ],
     links: [{ rel: "canonical", href: "/loja" }],
@@ -61,35 +61,38 @@ export const Route = createFileRoute("/loja")({
 const MSG_PRESENTE =
   "Olá! Quero garantir a Mini Bolsa exclusiva da campanha Primavera-Verão nas compras a partir de R$ 250.";
 const MSG_LOOKS =
-  "Olá! Gostaria de ver os looks da Coleção Primavera-Verão disponíveis na loja.";
+  "Olá! Gostaria de conhecer os looks disponíveis na loja física e receber atendimento presencial.";
 const MSG_VISITA =
-  "Olá! Estou indo até a Sheila Oliveira Store e queria avisar a equipe.";
+  "Olá! Gostaria de saber os horários de atendimento da loja física hoje e como funciona o provador.";
 const MSG_ENTREGA =
   "Olá! Gostaria de consultar a entrega para minha cidade em Rio Preto e região.";
+const MSG_PROVADOR =
+  "Olá! Vi este modelo no site e gostaria de saber se está disponível para eu provar na loja física.";
 
 const beneficios = [
   {
     icone: "👗",
-    titulo: "Experimente antes de escolher",
-    texto: "Veja caimento, tamanho e combinações pessoalmente.",
+    titulo: "Provador & Caimento Real",
+    texto:
+      "Experimente modelos e tamanhos com calma, sem a frustração de errar compras pela internet.",
   },
   {
-    icone: "❤️",
-    titulo: "Atendimento personalizado",
+    icone: "☕",
+    titulo: "Atendimento Consultivo",
     texto:
-      "Nossa equipe ajuda você a encontrar peças que combinem com seu estilo.",
+      "Nossa equipe ajuda você a combinar looks completos para o trabalho, dia a dia e ocasiões especiais.",
   },
   {
-    icone: "✨",
-    titulo: "Nova Coleção Primavera-Verão",
+    icone: "☀️",
+    titulo: "Tecidos Leves para Rio Preto",
     texto:
-      "Vestidos, conjuntos, blusas e looks selecionados para a nova estação.",
+      "Peças frescas, elegantes e confortáveis pensadas para o clima da nossa cidade.",
   },
   {
-    icone: "🚚",
-    titulo: "Entregamos em Rio Preto e região",
+    icone: "🎁",
+    titulo: "Presentão na Loja",
     texto:
-      "Escolha pelo WhatsApp e consulte a disponibilidade de entrega para sua cidade.",
+      "Faça suas compras na loja física acima de R$ 250 e saia com a Mini Bolsa exclusiva em mãos.",
   },
 ];
 
@@ -97,27 +100,27 @@ const categorias = [
   {
     nome: "Vestidos",
     img: vestidoAzul.url,
-    msg: "Olá! Vi os vestidos da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
   {
     nome: "Conjuntos",
     img: conjuntoAmarelo.url,
-    msg: "Olá! Vi os conjuntos da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
   {
     nome: "Blusas",
     img: blusaPoas.url,
-    msg: "Olá! Vi as blusas da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
   {
     nome: "Looks casuais",
     img: lookCasual.url,
-    msg: "Olá! Vi os looks casuais da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
   {
     nome: "Peças versáteis",
     img: lookVersatil.url,
-    msg: "Olá! Vi as peças versáteis da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
 ];
 
@@ -179,22 +182,19 @@ function LojaPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
           <div>
             <p className="eyebrow">
-              {loja.nome} • São José do Rio Preto
+              LOJA FÍSICA EM SÃO JOSÉ DO RIO PRETO • DESDE 2014
             </p>
             <h1 className="mt-5 text-4xl leading-[1.08] text-ink sm:text-5xl lg:text-6xl">
-              Seu novo look de <em className="italic text-sheila">Primavera-Verão</em>{" "}
-              está aqui
+              Prove antes. Sinta o caimento. Leve com total certeza.
             </h1>
             <p className="mt-6 max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground">
-              Venha conhecer de perto a nova coleção da Sheila Oliveira Store. Looks
-              femininos, leves e versáteis para você experimentar, combinar e escolher
-              com atendimento personalizado.
+              Nada substitui experimentar no seu corpo. Venha conhecer a Sheila Oliveira
+              Store na Bernardino de Campos e receba atendimento consultivo para
+              encontrar peças que realmente valorizam você.
             </p>
             <p className="mt-6 inline-flex items-start gap-2 rounded-2xl bg-blush px-4 py-3 text-sm text-ink">
               <span aria-hidden="true">📍</span>
-              <span>
-                {loja.endereco} — {loja.cidade}
-              </span>
+              <span>Rua Bernardino de Campos, 3465 - Loja 1 (Centro / SJRP)</span>
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
@@ -203,20 +203,19 @@ function LojaPage() {
                 rel="noopener noreferrer"
                 className="btn-base btn-primary"
               >
-                📍 Quero visitar a loja
+                📍 Traçar Rota no Google Maps
               </a>
               <a
-                href={wa(MSG_LOOKS)}
+                href={wa(MSG_VISITA)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-base btn-outline"
               >
-                💬 Ver looks pelo WhatsApp
+                💬 Avisar que Estou Indo no WhatsApp
               </a>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-              Não consegue vir até a loja? Também fazemos entregas em São José do Rio
-              Preto e região.
+              Atendimento consultivo e provador disponível para você experimentar com calma.
             </p>
           </div>
           <div className="relative">
@@ -289,18 +288,18 @@ function LojaPage() {
             />
           </div>
           <div>
-            <p className="eyebrow">Por que visitar a Sheila?</p>
+            <p className="eyebrow">Por que visitar a loja</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
-              Muito mais fácil escolher quando você pode experimentar
+              Moda de verdade feita para mulheres reais
             </h2>
             <p className="mt-6 text-[0.98rem] leading-relaxed text-muted-foreground">
-              Na Sheila Oliveira Store, você não precisa comprar sem saber como a peça
-              vai ficar. Venha experimentar, descobrir novas combinações e contar com
-              nossa equipe para montar looks que tenham a sua cara.
+              Sabemos como é frustrante comprar roupas online que marcam ou não têm o
+              tecido que você esperava. Aqui você toca nas peças, vê a qualidade de
+              perto e sai pronta para arrasar com looks que vestem bem de verdade.
             </p>
             <p className="mt-6 border-l-2 border-sheila pl-4 font-serif text-xl italic leading-snug text-ink">
-              Moda feminina com atendimento de verdade, perto de você, em São José do
-              Rio Preto.
+              Experimente, sinta o caimento e descubra peças que valorizam seu corpo,
+              com atendimento de verdade em São José do Rio Preto.
             </p>
             <a
               href={loja.maps.rota}
@@ -308,7 +307,7 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base btn-primary mt-8"
             >
-              Quero conhecer a Sheila Oliveira Store
+              Quero visitar a loja física
             </a>
           </div>
         </div>
@@ -348,7 +347,7 @@ function LojaPage() {
                   rel="noopener noreferrer"
                   className="btn-base btn-outline shrink-0 px-4 py-2 text-xs"
                 >
-                  Quero experimentar
+                  Ver disponibilidade no provador
                 </a>
               </div>
             </article>
@@ -443,9 +442,13 @@ function LojaPage() {
             </h2>
             <address className="mt-5 not-italic text-[0.98rem] leading-relaxed text-muted-foreground">
               <span className="block font-medium text-ink">{loja.nome}</span>
-              📍 {loja.endereco}
+              📍 Rua Bernardino de Campos, 3465 - Loja 1
               <br />
-              {loja.cidade}
+              Centro — São José do Rio Preto/SP
+              <p className="mt-3 max-w-lg text-sm">
+                Fácil acesso no centro de São José do Rio Preto. Estacionamento próximo e
+                ambiente tranquilo para você provar com calma.
+              </p>
             </address>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
@@ -472,7 +475,7 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base btn-primary w-full px-8 py-4 text-sm tracking-[0.12em] sm:w-auto"
             >
-              📍 TRAÇAR ROTA ATÉ A LOJA
+              📍 Abrir Localização no GPS
             </a>
             <a
               href={wa(MSG_VISITA)}
