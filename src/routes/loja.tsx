@@ -12,9 +12,9 @@ import lookCasual from "@/assets/look-casual.png.asset.json";
 import lookVersatil from "@/assets/look-versatil.png.asset.json";
 import { loja, wa } from "@/lib/loja-config";
 
-const TITLE = "Moda Feminina em São José do Rio Preto | Sheila Oliveira Store";
+const TITLE = "Loja Física de Moda Feminina em São José do Rio Preto | Sheila Oliveira Store";
 const DESC =
-  "Conheça a Sheila Oliveira Store em São José do Rio Preto. Nova Coleção Primavera-Verão, atendimento personalizado, loja física e entregas para Rio Preto e região.";
+  "Visite a Sheila Oliveira Store na Rua Bernardino de Campos, 3465, em São José do Rio Preto. Atendimento consultivo, provador e peças que vestem bem de verdade.";
 
 export const Route = createFileRoute("/loja")({
   head: () => ({
