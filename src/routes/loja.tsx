@@ -179,7 +179,7 @@ function LojaPage() {
 
       {/* 2. Hero */}
       <header className="bg-pink">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-20 lg:grid-cols-2 lg:gap-16 lg:pb-20 lg:pt-24">
           <div>
             <p className="eyebrow">
               LOJA FÍSICA EM SÃO JOSÉ DO RIO PRETO • DESDE 2014
