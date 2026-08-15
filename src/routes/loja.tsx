@@ -339,18 +339,17 @@ function LojaPage() {
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
-              <div className="flex items-center gap-2 p-4">
-                <h3 className="flex-1 whitespace-nowrap text-xl text-ink lg:text-2xl">
-                  {c.nome}
-                </h3>
+              <div className="flex flex-col items-start gap-3 p-5">
+                <h3 className="text-xl text-ink lg:text-2xl">{c.nome}</h3>
                 <a
                   href={wa(c.msg)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-base btn-outline shrink-0 px-2 py-2 text-[0.65rem] sm:text-xs"
+                  className="btn-base btn-outline w-full px-4 py-2.5 text-center text-xs"
                 >
                   Ver disponibilidade no provador
                 </a>
+
               </div>
             </article>
           ))}
