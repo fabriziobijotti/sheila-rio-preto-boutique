@@ -59,7 +59,7 @@ export const Route = createFileRoute("/loja")({
 });
 
 const MSG_PRESENTE =
-  "Olá! Quero garantir a Mini Bolsa exclusiva da campanha Primavera-Verão nas compras a partir de R$ 250.";
+  "Olá! Gostaria de visitar a Sheila Oliveira Store e saber como garantir minha Mini Bolsa exclusiva nas compras acima de R$ 250!";
 const MSG_LOOKS =
   "Olá! Gostaria de conhecer os looks disponíveis na loja física e receber atendimento presencial.";
 const MSG_VISITA =
@@ -339,13 +339,15 @@ function LojaPage() {
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
-              <div className="flex items-center justify-between gap-3 p-5">
-                <h3 className="min-w-0 truncate text-2xl text-ink">{c.nome}</h3>
+              <div className="flex items-center gap-2 p-4">
+                <h3 className="flex-1 whitespace-nowrap text-xl text-ink lg:text-2xl">
+                  {c.nome}
+                </h3>
                 <a
                   href={wa(c.msg)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-base btn-outline shrink-0 px-4 py-2 text-xs"
+                  className="btn-base btn-outline shrink-0 px-2 py-2 text-[0.65rem] sm:text-xs"
                 >
                   Ver disponibilidade no provador
                 </a>
@@ -442,13 +444,9 @@ function LojaPage() {
             </h2>
             <address className="mt-5 not-italic text-[0.98rem] leading-relaxed text-muted-foreground">
               <span className="block font-medium text-ink">{loja.nome}</span>
-              📍 Rua Bernardino de Campos, 3465 - Loja 1
-              <br />
-              Centro — São José do Rio Preto/SP
-              <p className="mt-3 max-w-lg text-sm">
-                Fácil acesso no centro de São José do Rio Preto. Estacionamento próximo e
-                ambiente tranquilo para você provar com calma.
-              </p>
+              📍 Rua Bernardino de Campos, 3465 - Loja 1 (Centro / SJRP — Próximo ao
+              Praça Shopping e Hospital Santa Helena). Fácil acesso e estacionamento
+              próximo para você provar com calma.
             </address>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
