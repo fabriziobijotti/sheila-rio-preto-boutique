@@ -9,7 +9,8 @@ export const loja = {
   maps: {
     rota: "https://www.google.com/maps/dir/?api=1&destination=Bernardino+de+Campos,+3465,+Loja+1,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP",
     embed:
-      "https://www.google.com/maps?q=Bernardino+de+Campos,+3465,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP&output=embed",
+      "https://maps.google.com/maps?q=Rua%20Bernardino%20de%20Campos%2C%203465%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Rio%20Preto%20-%20SP&z=16&hl=pt-BR&output=embed",
+
   },
   campanha: {
     valorMinimo: "R$ 250",
