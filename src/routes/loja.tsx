@@ -442,9 +442,13 @@ function LojaPage() {
             </h2>
             <address className="mt-5 not-italic text-[0.98rem] leading-relaxed text-muted-foreground">
               <span className="block font-medium text-ink">{loja.nome}</span>
-              📍 {loja.endereco}
+              📍 Rua Bernardino de Campos, 3465 - Loja 1
               <br />
-              {loja.cidade}
+              Centro — São José do Rio Preto/SP
+              <p className="mt-3 max-w-lg text-sm">
+                Fácil acesso no centro de São José do Rio Preto. Estacionamento próximo e
+                ambiente tranquilo para você provar com calma.
+              </p>
             </address>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
@@ -471,7 +475,7 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base btn-primary w-full px-8 py-4 text-sm tracking-[0.12em] sm:w-auto"
             >
-              📍 TRAÇAR ROTA ATÉ A LOJA
+              📍 Abrir Localização no GPS
             </a>
             <a
               href={wa(MSG_VISITA)}
