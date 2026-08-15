@@ -288,18 +288,18 @@ function LojaPage() {
             />
           </div>
           <div>
-            <p className="eyebrow">Por que visitar a Sheila?</p>
+            <p className="eyebrow">Por que visitar a loja</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
-              Muito mais fácil escolher quando você pode experimentar
+              Moda de verdade feita para mulheres reais
             </h2>
             <p className="mt-6 text-[0.98rem] leading-relaxed text-muted-foreground">
-              Na Sheila Oliveira Store, você não precisa comprar sem saber como a peça
-              vai ficar. Venha experimentar, descobrir novas combinações e contar com
-              nossa equipe para montar looks que tenham a sua cara.
+              Sabemos como é frustrante comprar roupas online que marcam ou não têm o
+              tecido que você esperava. Aqui você toca nas peças, vê a qualidade de
+              perto e sai pronta para arrasar com looks que vestem bem de verdade.
             </p>
             <p className="mt-6 border-l-2 border-sheila pl-4 font-serif text-xl italic leading-snug text-ink">
-              Moda feminina com atendimento de verdade, perto de você, em São José do
-              Rio Preto.
+              Experimente, sinta o caimento e descubra peças que valorizam seu corpo,
+              com atendimento de verdade em São José do Rio Preto.
             </p>
             <a
               href={loja.maps.rota}
@@ -307,7 +307,7 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base btn-primary mt-8"
             >
-              Quero conhecer a Sheila Oliveira Store
+              Quero visitar a loja física
             </a>
           </div>
         </div>
