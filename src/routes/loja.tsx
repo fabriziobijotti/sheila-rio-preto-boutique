@@ -30,8 +30,8 @@ export const Route = createFileRoute("/loja")({
       { name: "twitter:description", content: DESC },
       {
         name: "keywords",
-        content:
-          "loja de roupas femininas em São José do Rio Preto, moda feminina São José do Rio Preto, loja feminina Rio Preto, roupas femininas Rio Preto, coleção primavera verão Rio Preto",
+          content:
+            "loja física de roupas femininas em São José do Rio Preto, provador em Rio Preto, atendimento consultivo de moda, loja feminina centro Rio Preto, Sheila Oliveira Store, moda feminina Rio Preto",
       },
     ],
     links: [{ rel: "canonical", href: "/loja" }],
