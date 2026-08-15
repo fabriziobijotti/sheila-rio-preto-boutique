@@ -322,8 +322,8 @@ function LojaPage() {
                 decoding="async"
                 className="aspect-[4/5] w-full object-cover"
               />
-              <div className="flex flex-col items-stretch gap-3 p-5">
-                <h3 className="w-full overflow-visible whitespace-normal break-words text-xl leading-snug text-ink lg:text-2xl">
+              <div className="flex min-w-0 flex-col items-stretch gap-3 p-5">
+                <h3 className="max-w-none overflow-visible whitespace-normal break-normal text-clip text-xl leading-snug text-ink lg:text-2xl">
                   {c.nome}
                 </h3>
                 <a
@@ -448,7 +448,7 @@ function LojaPage() {
               href={loja.maps.search}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-4xl border border-border shadow-card"
+               className="group relative block overflow-hidden rounded-4xl border border-border bg-card shadow-card"
             >
               <img
                 src={mapaPreview}
@@ -457,7 +457,7 @@ function LojaPage() {
                 height={768}
                 loading="eager"
                 decoding="async"
-                className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 className="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />
               <span className="absolute inset-0 flex items-center justify-center bg-ink/30 transition-colors group-hover:bg-ink/40">
                 <span className="btn-base btn-primary px-5 py-2.5 text-xs shadow-soft">
