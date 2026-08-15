@@ -211,7 +211,7 @@ function LojaPage() {
               height={1008}
               loading="eager"
               decoding="async"
-              className="absolute -bottom-8 -left-4 hidden w-44 rounded-3xl border-4 border-cream object-cover shadow-card lg:block"
+              className="absolute -bottom-8 -left-4 block w-32 rounded-3xl border-4 border-cream object-cover shadow-card sm:w-44"
             />
           </div>
         </div>
