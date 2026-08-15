@@ -317,8 +317,8 @@ function LojaPage() {
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
-              <div className="flex min-w-0 flex-col items-stretch gap-3 p-5">
-                <h3 className="w-full whitespace-normal break-words text-xl leading-snug text-ink lg:text-2xl">
+              <div className="flex flex-col items-stretch gap-3 p-5">
+                <h3 className="w-full overflow-visible whitespace-normal break-words text-xl leading-snug text-ink lg:text-2xl">
                   {c.nome}
                 </h3>
                 <a
