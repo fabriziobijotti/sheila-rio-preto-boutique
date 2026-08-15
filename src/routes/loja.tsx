@@ -61,35 +61,38 @@ export const Route = createFileRoute("/loja")({
 const MSG_PRESENTE =
   "Olá! Quero garantir a Mini Bolsa exclusiva da campanha Primavera-Verão nas compras a partir de R$ 250.";
 const MSG_LOOKS =
-  "Olá! Gostaria de ver os looks da Coleção Primavera-Verão disponíveis na loja.";
+  "Olá! Gostaria de conhecer os looks disponíveis na loja física e receber atendimento presencial.";
 const MSG_VISITA =
-  "Olá! Estou indo até a Sheila Oliveira Store e queria avisar a equipe.";
+  "Olá! Gostaria de saber os horários de atendimento da loja física hoje e como funciona o provador.";
 const MSG_ENTREGA =
   "Olá! Gostaria de consultar a entrega para minha cidade em Rio Preto e região.";
+const MSG_PROVADOR =
+  "Olá! Vi este modelo no site e gostaria de saber se está disponível para eu provar na loja física.";
 
 const beneficios = [
   {
     icone: "👗",
-    titulo: "Experimente antes de escolher",
-    texto: "Veja caimento, tamanho e combinações pessoalmente.",
+    titulo: "Provador & Caimento Real",
+    texto:
+      "Experimente modelos e tamanhos com calma, sem a frustração de errar compras pela internet.",
   },
   {
-    icone: "❤️",
-    titulo: "Atendimento personalizado",
+    icone: "☕",
+    titulo: "Atendimento Consultivo",
     texto:
-      "Nossa equipe ajuda você a encontrar peças que combinem com seu estilo.",
+      "Nossa equipe ajuda você a combinar looks completos para o trabalho, dia a dia e ocasiões especiais.",
   },
   {
-    icone: "✨",
-    titulo: "Nova Coleção Primavera-Verão",
+    icone: "☀️",
+    titulo: "Tecidos Leves para Rio Preto",
     texto:
-      "Vestidos, conjuntos, blusas e looks selecionados para a nova estação.",
+      "Peças frescas, elegantes e confortáveis pensadas para o clima da nossa cidade.",
   },
   {
-    icone: "🚚",
-    titulo: "Entregamos em Rio Preto e região",
+    icone: "🎁",
+    titulo: "Presentão na Loja",
     texto:
-      "Escolha pelo WhatsApp e consulte a disponibilidade de entrega para sua cidade.",
+      "Faça suas compras na loja física acima de R$ 250 e saia com a Mini Bolsa exclusiva em mãos.",
   },
 ];
 
@@ -97,27 +100,27 @@ const categorias = [
   {
     nome: "Vestidos",
     img: vestidoAzul.url,
-    msg: "Olá! Vi os vestidos da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
   {
     nome: "Conjuntos",
     img: conjuntoAmarelo.url,
-    msg: "Olá! Vi os conjuntos da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
   {
     nome: "Blusas",
     img: blusaPoas.url,
-    msg: "Olá! Vi as blusas da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
   {
     nome: "Looks casuais",
     img: lookCasual.url,
-    msg: "Olá! Vi os looks casuais da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
   {
     nome: "Peças versáteis",
     img: lookVersatil.url,
-    msg: "Olá! Vi as peças versáteis da coleção Primavera-Verão no site e gostaria de conhecer os modelos disponíveis na loja.",
+    msg: MSG_PROVADOR,
   },
 ];
 
