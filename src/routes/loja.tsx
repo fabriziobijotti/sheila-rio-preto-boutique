@@ -4,7 +4,7 @@ import fachada from "@/assets/fachada-real.png.asset.json";
 import vitrineManequins from "@/assets/vitrine-manequins.png.asset.json";
 import provador from "@/assets/provador.jpg";
 import araras from "@/assets/araras.jpg";
-import miniBolsa from "@/assets/mini-bolsa.jpg";
+import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
 import conjuntoAmarelo from "@/assets/conjunto-amarelo.png.asset.json";
 import blusaPoas from "@/assets/blusa-poas.png.asset.json";
