@@ -11,6 +11,7 @@ import blusaPoas from "@/assets/blusa-poas.png.asset.json";
 import lookCasual from "@/assets/look-casual.png.asset.json";
 import lookVersatil from "@/assets/look-versatil.png.asset.json";
 import { loja, wa } from "@/lib/loja-config";
+import mapaPreview from "@/assets/mapa-preview.jpg";
 
 const TITLE = "Loja Física de Moda Feminina em São José do Rio Preto | Sheila Oliveira Store";
 const DESC =
@@ -347,7 +348,7 @@ function LojaPage() {
                   rel="noopener noreferrer"
                   className="btn-base btn-outline w-full px-4 py-2.5 text-center text-xs"
                 >
-                  Ver disponibilidade no provador
+                  Provar na loja
                 </a>
 
               </div>
@@ -361,7 +362,7 @@ function LojaPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
           <img
             src={miniBolsa}
-            alt="Mini Bolsa exclusiva da campanha Primavera-Verão"
+            alt="Mini Bolsa Exclusiva Primavera-Verão"
             width={1200}
             height={1200}
             loading="lazy"
@@ -457,13 +458,26 @@ function LojaPage() {
               loading="lazy"
               className="aspect-[4/3] w-full rounded-4xl object-cover shadow-card"
             />
-            <iframe
-              title="Mapa da localização da Sheila Oliveira Store"
-              src={loja.maps.embed}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="aspect-[4/3] w-full rounded-4xl border border-border shadow-card"
-            />
+            <a
+              href={loja.maps.rota}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden rounded-4xl border border-border shadow-card"
+            >
+              <img
+                src={mapaPreview}
+                alt="Localização da Sheila Oliveira Store na Rua Bernardino de Campos, 3465"
+                width={1024}
+                height={768}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <span className="absolute inset-0 flex items-center justify-center bg-ink/30 transition-colors group-hover:bg-ink/40">
+                <span className="btn-base btn-primary px-5 py-2.5 text-xs shadow-soft">
+                  📍 Abrir no Google Maps
+                </span>
+              </span>
+            </a>
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
