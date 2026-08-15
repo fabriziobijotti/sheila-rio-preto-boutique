@@ -4,7 +4,7 @@ import fachada from "@/assets/fachada-real.png.asset.json";
 import vitrineManequins from "@/assets/vitrine-manequins.png.asset.json";
 import provador from "@/assets/provador.jpg";
 import araras from "@/assets/araras.jpg";
-import miniBolsa from "@/assets/mini-bolsa.jpg";
+import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
 import conjuntoAmarelo from "@/assets/conjunto-amarelo.png.asset.json";
 import blusaPoas from "@/assets/blusa-poas.png.asset.json";
@@ -93,7 +93,8 @@ const beneficios = [
     icone: "🎁",
     titulo: "Presentão na Loja",
     texto:
-      "Faça suas compras na loja física acima de R$ 250 e saia com a Mini Bolsa exclusiva em mãos.",
+      "Faça suas compras a partir de R$ 250 na loja física e leve sua Mini Bolsa exclusiva na hora para completar suas produções.",
+    img: miniBolsasStudio.url,
   },
 ];
 
@@ -223,15 +224,31 @@ function LojaPage() {
           {beneficios.map((b) => (
             <div
               key={b.titulo}
-              className="rounded-3xl border border-border bg-card p-6 shadow-card"
+              className="overflow-hidden rounded-3xl border border-border bg-card p-0 shadow-card"
             >
-              <span className="text-2xl" aria-hidden="true">
-                {b.icone}
-              </span>
-              <h3 className="mt-4 text-xl text-ink">{b.titulo}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {b.texto}
-              </p>
+              {b.img ? (
+                <img
+                  src={b.img}
+                  alt="Mini Bolsas exclusivas da Primavera-Verão na Sheila Oliveira Store"
+                  width={800}
+                  height={600}
+                  loading="eager"
+                  decoding="async"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              ) : (
+                <div className="p-6 pb-0">
+                  <span className="text-2xl" aria-hidden="true">
+                    {b.icone}
+                  </span>
+                </div>
+              )}
+              <div className="p-6 pt-4">
+                <h3 className="text-xl text-ink">{b.titulo}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {b.texto}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -345,8 +362,8 @@ function LojaPage() {
       <section className="bg-pink py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
           <img
-            src={miniBolsa}
-            alt="Mini Bolsa Exclusiva Primavera-Verão"
+            src={miniBolsasStudio.url}
+            alt="Mini Bolsas exclusivas da Primavera-Verão na Sheila Oliveira Store"
             width={1200}
             height={1200}
             loading="eager"
@@ -359,12 +376,12 @@ function LojaPage() {
               Seu look novo ainda vem com presente
             </h2>
             <p className="mt-5 text-[0.98rem] leading-relaxed text-ink/80">
-              Nas compras a partir de {loja.campanha.valorMinimo} em peças da campanha,
-              você ganha uma Mini Bolsa exclusiva da Primavera-Verão.
+              Faça suas compras a partir de {loja.campanha.valorMinimo} na loja física e
+              leve sua Mini Bolsa exclusiva na hora para completar suas produções.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-ink/70">
-              Escolha seus looks favoritos, complete {loja.campanha.valorMinimo} em
-              compras e leve sua Mini Bolsa para completar suas produções.
+              Com atendimento consultivo no provador, você experimenta os looks, confirma
+              o caimento e ainda sai com um presente especial da nossa coleção.
             </p>
             <p className="mt-7 rounded-3xl bg-card/80 px-5 py-4 text-center text-[0.72rem] font-medium tracking-[0.14em] text-sheila sm:text-sm">
               COMPROU {loja.campanha.valorMinimo} EM LOOKS → GANHOU UMA MINI BOLSA
@@ -378,8 +395,8 @@ function LojaPage() {
               🎁 Quero garantir meu presente
             </a>
             <p className="mt-4 text-xs leading-relaxed text-ink/60">
-              Brinde sujeito à disponibilidade de estoque. Consulte as condições da
-              campanha.
+              Brinde sujeito à disponibilidade de estoque. Confirme antes de visitar a loja
+              e consulte as condições da campanha.
               {loja.campanha.periodo ? ` ${loja.campanha.periodo}.` : ""}
             </p>
           </div>
