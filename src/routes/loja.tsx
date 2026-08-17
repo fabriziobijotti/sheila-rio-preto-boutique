@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
+import { Clock, Coffee, Gift, MapPin, Menu, MessageCircle, Shirt, Sun, X } from "lucide-react";
 
+import { cn } from "@/lib/utils";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-storefront.jpg.asset.json";
 import lojaInterno from "@/assets/vitrine-manequins-2.jpg.asset.json";
