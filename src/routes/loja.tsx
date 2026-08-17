@@ -243,7 +243,7 @@ function LojaPage() {
               </a>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-              Atendimento consultivo e provador disponível para você experimentar com calma.
+              {"\n"}
             </p>
           </div>
           <div className="relative">
