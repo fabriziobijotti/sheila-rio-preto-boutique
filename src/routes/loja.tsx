@@ -714,7 +714,7 @@ function LojaPage() {
             height={1200}
             loading="eager"
             decoding="async"
-            className="aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
+            className="aspect-[4/3] w-full rounded-3xl object-cover object-top shadow-card"
           />
         </div>
         <p className="mx-auto mt-10 max-w-6xl px-4 text-xs text-muted-foreground">
