@@ -310,11 +310,10 @@ function LojaPage() {
             </div>
           </div>
         </div>
-      </header>
-
+      </section>
 
       {/* 3. Benefícios */}
-      <section className="relative z-10 bg-background py-16">
+      <section className="bg-background py-16">
         <div className="mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-2 lg:grid-cols-4">
           {beneficios.map((b) => (
             <div
