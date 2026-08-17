@@ -156,8 +156,57 @@ const faq = [
 function LojaPage() {
   return (
     <div className="min-h-screen bg-background">
+      {/* 0. Barra de aviso + navegação */}
+      <div className="bg-sheila text-cream">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 py-3 text-center text-sm">
+          <span aria-hidden="true">🎁</span>
+          <p>
+            <strong className="font-semibold">PRESENTÃO:</strong> nas compras a partir
+            de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.
+          </p>
+          <a
+            href="#colecao"
+            className="rounded-full border border-cream/70 px-4 py-1 text-xs transition-colors hover:bg-cream hover:text-sheila"
+          >
+            Ver coleção
+          </a>
+        </div>
+      </div>
+      <div className="bg-blush">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4">
+          <a href="#top" className="leading-none">
+            <span className="block text-lg tracking-[0.24em] text-sheila">
+              SHEILA OLIVEIRA
+            </span>
+            <span className="block text-[0.6rem] tracking-[0.5em] text-muted-foreground">
+              STORE
+            </span>
+          </a>
+          <nav className="hidden items-center gap-8 text-sm text-ink md:flex">
+            <a href="#colecao" className="transition-colors hover:text-sheila">
+              Coleção
+            </a>
+            <a href="#presente" className="transition-colors hover:text-sheila">
+              Novidades
+            </a>
+            <a href="#localizacao" className="transition-colors hover:text-sheila">
+              Contato
+            </a>
+          </nav>
+          <a
+            href={wa(MSG_VISITA)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-base btn-primary px-5 py-2.5 text-sm"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+
       {/* 1. Hero */}
-      <header className="bg-pink">
+      <header id="top" className="bg-pink">
+
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
           <div>
             <p className="eyebrow">
