@@ -295,8 +295,8 @@ function LojaPage() {
               <div className="absolute -inset-8 -z-10 hidden rounded-full bg-accent blur-2xl lg:block" />
               <div className="overflow-hidden rounded-[2rem] shadow-[var(--shadow-elegant)]">
                 <img
-                  src={vitrineManequins.url}
-                  alt="Vitrine da Sheila Oliveira Store com looks da Coleção Primavera–Verão"
+                  src={lojaInterno.url}
+                  alt="Interior da Sheila Oliveira Store com araras de roupas femininas e bolsas em São José do Rio Preto"
                   width={1600}
                   height={1200}
                   loading="eager"
