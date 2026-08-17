@@ -94,7 +94,6 @@ const beneficios = [
     titulo: "Presentão na Loja",
     texto:
       "Faça suas compras a partir de R$ 250 na loja física e leve sua Mini Bolsa exclusiva na hora para completar suas produções.",
-    img: miniBolsasStudio.url,
   },
 ];
 
