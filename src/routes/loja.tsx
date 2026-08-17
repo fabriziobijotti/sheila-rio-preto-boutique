@@ -4,7 +4,7 @@ import { Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-real.png.asset.json";
 import lojaInterno from "@/assets/loja-interno.jpeg.asset.json";
-import provador from "@/assets/provador.jpg";
+import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
 import vitrineManequins from "@/assets/vitrine-manequins.jpeg.asset.json";
 import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
