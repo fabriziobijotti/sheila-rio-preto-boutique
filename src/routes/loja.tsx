@@ -362,7 +362,7 @@ function LojaPage() {
       </section>
 
       {/* 5. Nova coleção */}
-      <section className="bg-[#f7f0d1] mx-auto max-w-6xl px-4 py-20">
+      <section id="colecao" className="bg-[#f7f0d1] mx-auto max-w-6xl px-4 py-20">
         <div className="max-w-2xl">
           <p className="eyebrow">Nova coleção</p>
           <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -408,7 +408,7 @@ function LojaPage() {
       </section>
 
       {/* 6. Presentão */}
-      <section className="bg-pink py-16">
+      <section id="presente" className="bg-pink py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
           <img
             src={miniBolsasStudio.url}
@@ -486,7 +486,7 @@ function LojaPage() {
       </section>
 
       {/* 8. Localização */}
-      <section className="bg-blue py-16">
+      <section id="localizacao" className="bg-blue py-16">
         <div className="mx-auto max-w-6xl px-4">
           <div className="max-w-2xl">
             <p className="eyebrow">Localização</p>
