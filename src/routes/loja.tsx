@@ -5,7 +5,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-real.png.asset.json";
 import lojaInterno from "@/assets/loja-interno.jpeg.asset.json";
 import provador from "@/assets/provador.jpg";
-import araras from "@/assets/araras.jpg";
+import vitrineManequins from "@/assets/vitrine-manequins.jpeg.asset.json";
 import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
 import conjuntoAmarelo from "@/assets/conjunto-amarelo.png.asset.json";
@@ -355,8 +355,8 @@ function LojaPage() {
               className="aspect-square w-full rounded-3xl object-cover shadow-card"
             />
             <img
-              src={araras}
-              alt="Araras de roupas femininas na loja de Rio Preto"
+              src={vitrineManequins.url}
+              alt="Vitrine da Sheila Oliveira Store com manequins e looks da nova coleção em São José do Rio Preto"
               width={1408}
               height={1008}
               loading="eager"
