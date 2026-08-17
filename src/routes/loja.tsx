@@ -450,7 +450,7 @@ function LojaPage() {
             height={1200}
             loading="eager"
             decoding="async"
-            className="aspect-square w-full rounded-4xl object-cover shadow-soft"
+            className="aspect-[4/3] w-full rounded-4xl object-cover object-center shadow-soft"
           />
           <div>
             <p className="eyebrow">Presentão Primavera-Verão</p>
