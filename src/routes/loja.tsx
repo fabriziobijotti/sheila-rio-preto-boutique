@@ -208,7 +208,10 @@ function LojaPage() {
                 Novidades
               </a>
               <a href="#localizacao" className="transition-colors hover:text-sheila">
-                Contato
+                Localização
+              </a>
+              <a href="#horario" className="transition-colors hover:text-sheila">
+                Horário
               </a>
             </nav>
             <a
