@@ -174,24 +174,16 @@ function LojaPage() {
       </div>
       <div className="bg-blush">
         <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-4">
-          <a href="#top" className="flex flex-col items-center leading-none">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 32 40"
-              className="mb-1 h-7 w-6 text-ink"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.6"
-            >
-              <rect x="6" y="10" width="20" height="24" rx="2" />
-              <path d="M11 10V6a5 5 0 0 1 10 0v4M6 18h20M6 26h20M16 10v24" />
-            </svg>
-            <span className="block font-serif text-lg tracking-[0.18em] text-ink">
-              SHEILA OLIVEIRA
-            </span>
-            <span className="mt-1 block text-[0.5rem] tracking-[0.55em] text-muted-foreground">
-              STORE
-            </span>
+          <a href="#top" className="flex items-center">
+            <img
+              src={sheilaLogo.url}
+              alt="Sheila Oliveira Store"
+              width={550}
+              height={229}
+              loading="eager"
+              decoding="async"
+              className="h-14 w-auto sm:h-16"
+            />
           </a>
           <nav className="hidden items-center justify-center gap-10 text-sm text-ink md:flex">
             <a href="#colecao" className="transition-colors hover:text-sheila">
