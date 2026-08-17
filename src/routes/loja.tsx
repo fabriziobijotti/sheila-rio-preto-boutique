@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
 
+import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-real.png.asset.json";
 import vitrineManequins from "@/assets/vitrine-manequins.png.asset.json";
 import provador from "@/assets/provador.jpg";
@@ -14,6 +15,16 @@ import lookVersatil from "@/assets/look-versatil.png.asset.json";
 import { loja, wa } from "@/lib/loja-config";
 import mapaPreview from "@/assets/mapa-localizacao.jpg";
 import sheilaLogo from "@/assets/sheila-logo.png.asset.json";
+
+function trackConversion(label: string) {
+  try {
+    // @ts-expect-error gtag may be available via Google Tag Manager
+    window.gtag?.("event", "conversion", { event_label: label });
+  } catch {
+    // noop
+  }
+}
+
 
 const TITLE = "Loja Física de Moda Feminina em São José do Rio Preto | Sheila Oliveira Store";
 const DESC =
@@ -210,60 +221,94 @@ function LojaPage() {
 
 
       {/* 1. Hero */}
-      <header id="top" className="bg-pink">
+      <header id="top" className="bg-pink/25">
+        <div className="mx-auto max-w-7xl px-5 pt-36 md:px-8 md:pt-40">
+          <div className="grid items-center gap-10 pb-16 lg:grid-cols-2 lg:gap-16 lg:pb-24">
+            {/* Left column: text + CTAs */}
+            <div className="animate-[fade-up_1s_ease-out_both] motion-reduce:animate-none">
+              <span className="inline-flex items-center rounded-full bg-background/70 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground">
+                Coleção Primavera–Verão
+              </span>
+              <h1 className="mt-6 font-serif text-4xl font-light leading-[1.08] text-foreground sm:text-5xl lg:text-6xl">
+                A nova estação começa com você
+              </h1>
 
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
-          <div>
-            <p className="eyebrow">
-              LOJA FÍSICA EM SÃO JOSÉ DO RIO PRETO • DESDE 2014
-            </p>
-            <h1 className="mt-5 text-4xl leading-[1.08] text-ink sm:text-5xl lg:text-6xl">
-              Prove antes. Sinta o caimento. Leve com total certeza.
-            </h1>
-            <p className="mt-6 max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground">
-              Nada substitui experimentar no seu corpo. Venha conhecer a Sheila Oliveira
-              Store na Bernardino de Campos e receba atendimento consultivo para
-              encontrar peças que realmente valorizam você.
-            </p>
-            <p className="mt-6 inline-flex items-start gap-2 rounded-2xl bg-blush px-4 py-3 text-sm text-ink">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sheila" aria-hidden="true" strokeWidth={1.5} />
-              <span>Rua Bernardino de Campos, 3465 - Loja 1 (Centro / SJRP)</span>
-            </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              {/* Gift seal */}
               <a
-                href={loja.maps.rota}
+                href={wa(MSG_PRESENTE)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-base btn-primary"
+                className="group mt-6 inline-flex transition-transform hover:-translate-y-0.5"
+                onClick={() => trackConversion("selo_presente")}
               >
-                <MapPin className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
-                Traçar Rota no Google Maps
+                <span className="inline-flex items-center gap-3 rounded-full bg-primary px-4 py-2.5 text-primary-foreground shadow-[var(--shadow-elegant)] ring-1 ring-primary/20 ring-offset-2 ring-offset-background animate-[selo-pulse_2.8s_ease-in-out_infinite] motion-reduce:animate-none">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/20">
+                    <Gift
+                      className="h-5 w-5"
+                      aria-hidden="true"
+                      strokeWidth={1.5}
+                    />
+                  </span>
+                  <span className="text-left">
+                    <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.18em]">
+                      Presente
+                    </span>
+                    <span className="font-serif text-base">
+                      Mini Bolsa exclusiva
+                    </span>
+                  </span>
+                </span>
               </a>
-              <a
-                href={wa(MSG_VISITA)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-base btn-outline"
-              >
-                <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
-                Avisar que Estou Indo no WhatsApp
-              </a>
+
+              <p className="mt-6 max-w-lg text-lg leading-relaxed text-foreground/80">
+                Descubra looks frescos, leves e elegantes na nossa Coleção
+                Primavera–Verão. Cada peça foi escolhida para valorizar seu corpo
+                e acompanhar seus dias com sofisticação.
+              </p>
+              <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground">
+                Na Sheila Oliveira Store, em São José do Rio Preto, você
+                experimenta no provador, recebe atendimento consultivo e sai com
+                peças que realmente vestem bem.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="#colecao"
+                  className="btn-base btn-primary shadow-soft"
+                  onClick={() => trackConversion("cta_conhecer_colecao")}
+                >
+                  Conhecer a coleção
+                </a>
+                <WhatsAppButton
+                  mensagem={MSG_VISITA}
+                  variant="outline"
+                  className="shadow-card"
+                  onClick={() => trackConversion("cta_falar_consultora")}
+                >
+                  Falar com uma consultora
+                </WhatsAppButton>
+              </div>
             </div>
-            <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-              {"\n"}
-            </p>
-          </div>
-          <div className="relative">
-            <img
-              src={fachada.url}
-              alt="Fachada da Sheila Oliveira Store em São José do Rio Preto"
-              width={1600}
-              height={1200}
-              className="aspect-[4/5] w-full rounded-4xl object-cover shadow-soft"
-            />
+
+            {/* Right column: main image */}
+            <div className="relative">
+              <div className="absolute -inset-8 -z-10 hidden rounded-full bg-accent blur-2xl lg:block" />
+              <div className="overflow-hidden rounded-[2rem] shadow-[var(--shadow-elegant)]">
+                <img
+                  src={vitrineManequins.url}
+                  alt="Vitrine da Sheila Oliveira Store com looks da Coleção Primavera–Verão"
+                  width={1600}
+                  height={1200}
+                  loading="eager"
+                  decoding="async"
+                  className="aspect-[4/5] w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </header>
+
 
       {/* 3. Benefícios */}
       <section className="bg-background py-16">
