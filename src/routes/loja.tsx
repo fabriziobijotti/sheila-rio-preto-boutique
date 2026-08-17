@@ -8,6 +8,7 @@ import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
 import provador from "@/assets/provador.jpg";
 import vitrineManequins from "@/assets/vitrine-manequins.jpeg.asset.json";
 import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
+import bolsasClarasHorizontal from "@/assets/bolsas_claras_horizontal.jpg.asset.json";
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
 import conjuntoAmarelo from "@/assets/conjunto-amarelo.png.asset.json";
 import blusaPoas from "@/assets/blusa-poas.png.asset.json";
@@ -443,8 +444,8 @@ function LojaPage() {
       <section id="presente" className="bg-pink py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
           <img
-            src={miniBolsasStudio.url}
-            alt="Mini Bolsas exclusivas da Primavera-Verão na Sheila Oliveira Store"
+            src={bolsasClarasHorizontal.url}
+            alt="Mini Bolsas claras exclusivas da Primavera-Verão na Sheila Oliveira Store"
             width={1200}
             height={1200}
             loading="eager"
