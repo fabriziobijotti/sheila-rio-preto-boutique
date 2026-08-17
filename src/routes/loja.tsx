@@ -172,61 +172,25 @@ const faq = [
 function LojaPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* 0. Barra de aviso + navegação — sticky no topo */}
-      <header id="top" className="sticky top-0 z-50 shadow-card">
-        <div className="bg-sheila text-cream">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 py-2.5 text-center text-[0.8rem]">
-            <Gift className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
-            <p>
-              <strong className="font-semibold">PRESENTÃO:</strong> nas compras a partir
-              de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.
-            </p>
-            <a
-              href="#colecao"
-              className="rounded-full border border-cream/70 px-4 py-1 text-xs transition-colors hover:bg-cream hover:text-sheila"
-            >
-              Ver coleção
-            </a>
-          </div>
+      {/* 0. Promo bar — fixed above the header */}
+      <div className="fixed inset-x-0 top-0 z-[60] bg-sheila text-cream">
+        <div className="mx-auto flex h-9 max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 text-center text-[0.8rem]">
+          <Gift className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
+          <p>
+            <strong className="font-semibold">PRESENTÃO:</strong> nas compras a partir
+            de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.
+          </p>
+          <a
+            href="#colecao"
+            className="rounded-full border border-cream/70 px-4 py-1 text-xs transition-colors hover:bg-cream hover:text-sheila"
+          >
+            Ver coleção
+          </a>
         </div>
-        <div className="bg-blush">
-          <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-4">
-            <a href="#top" className="flex items-center">
-              <img
-                src={sheilaLogo.url}
-                alt="Sheila Oliveira Store"
-                width={550}
-                height={229}
-                loading="eager"
-                decoding="async"
-                className="h-14 w-auto sm:h-16"
-              />
-            </a>
-            <nav className="hidden items-center justify-center gap-10 text-sm text-ink md:flex">
-              <a href="#colecao" className="transition-colors hover:text-sheila">
-                Coleção
-              </a>
-              <a href="#presente" className="transition-colors hover:text-sheila">
-                Novidades
-              </a>
-              <a href="#localizacao" className="transition-colors hover:text-sheila">
-                Localização
-              </a>
-              <a href="#horario" className="transition-colors hover:text-sheila">
-                Horário
-              </a>
-            </nav>
-            <a
-              href={wa(MSG_VISITA)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-base btn-primary justify-self-end rounded-full px-7 py-3 text-sm font-semibold"
-            >
-              Falar no WhatsApp
-            </a>
-          </div>
-        </div>
-      </header>
+      </div>
+
+      {/* 1. Fixed header — transparent at top, gains background on scroll */}
+      <HeaderNav />
 
       {/* 1. Hero */}
       <section className="bg-pink/25">
