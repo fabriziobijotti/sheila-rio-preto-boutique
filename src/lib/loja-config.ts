@@ -3,6 +3,7 @@ export const loja = {
   nome: "Sheila Oliveira Store",
   endereco: "Bernardino de Campos, 3465, Loja 1",
   cidade: "São José do Rio Preto — SP",
+  horario: "Segunda a Sexta: 9h às 19h | Sábado: 9h às 14h",
   // Substitua pelo número real com DDI/DDD (somente dígitos).
   whatsapp: "5517992287373",
   instagram: "https://instagram.com/sheilaoliveirastorerp",

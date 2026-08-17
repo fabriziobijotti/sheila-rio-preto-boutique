@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
+import { Clock, Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
 
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-storefront.jpg.asset.json";
@@ -208,7 +208,10 @@ function LojaPage() {
                 Novidades
               </a>
               <a href="#localizacao" className="transition-colors hover:text-sheila">
-                Contato
+                Localização
+              </a>
+              <a href="#horario" className="transition-colors hover:text-sheila">
+                Horário
               </a>
             </nav>
             <a
@@ -533,6 +536,10 @@ function LojaPage() {
               Praça Shopping e Hospital Santa Helena). Fácil acesso e estacionamento
               próximo para você provar com calma.
             </address>
+            <p id="horario" className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
+              <Clock className="h-4 w-4 text-sheila" aria-hidden="true" strokeWidth={1.5} />
+              {loja.horario}
+            </p>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <img
