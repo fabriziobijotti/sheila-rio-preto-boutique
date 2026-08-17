@@ -170,60 +170,61 @@ const faq = [
 function LojaPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* 0. Barra de aviso + navegação */}
-      <div className="bg-sheila text-cream">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 py-2.5 text-center text-[0.8rem]">
-          <Gift className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
-          <p>
-            <strong className="font-semibold">PRESENTÃO:</strong> nas compras a partir
-            de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.
-          </p>
-          <a
-            href="#colecao"
-            className="rounded-full border border-cream/70 px-4 py-1 text-xs transition-colors hover:bg-cream hover:text-sheila"
-          >
-            Ver coleção
-          </a>
+      {/* 0. Barra de aviso + navegação — sticky no topo */}
+      <header id="top" className="sticky top-0 z-50 shadow-card">
+        <div className="bg-sheila text-cream">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 py-2.5 text-center text-[0.8rem]">
+            <Gift className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
+            <p>
+              <strong className="font-semibold">PRESENTÃO:</strong> nas compras a partir
+              de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.
+            </p>
+            <a
+              href="#colecao"
+              className="rounded-full border border-cream/70 px-4 py-1 text-xs transition-colors hover:bg-cream hover:text-sheila"
+            >
+              Ver coleção
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="bg-blush">
-        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-4">
-          <a href="#top" className="flex items-center">
-            <img
-              src={sheilaLogo.url}
-              alt="Sheila Oliveira Store"
-              width={550}
-              height={229}
-              loading="eager"
-              decoding="async"
-              className="h-14 w-auto sm:h-16"
-            />
-          </a>
-          <nav className="hidden items-center justify-center gap-10 text-sm text-ink md:flex">
-            <a href="#colecao" className="transition-colors hover:text-sheila">
-              Coleção
+        <div className="bg-blush">
+          <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-4">
+            <a href="#top" className="flex items-center">
+              <img
+                src={sheilaLogo.url}
+                alt="Sheila Oliveira Store"
+                width={550}
+                height={229}
+                loading="eager"
+                decoding="async"
+                className="h-14 w-auto sm:h-16"
+              />
             </a>
-            <a href="#presente" className="transition-colors hover:text-sheila">
-              Novidades
+            <nav className="hidden items-center justify-center gap-10 text-sm text-ink md:flex">
+              <a href="#colecao" className="transition-colors hover:text-sheila">
+                Coleção
+              </a>
+              <a href="#presente" className="transition-colors hover:text-sheila">
+                Novidades
+              </a>
+              <a href="#localizacao" className="transition-colors hover:text-sheila">
+                Contato
+              </a>
+            </nav>
+            <a
+              href={wa(MSG_VISITA)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-base btn-primary justify-self-end rounded-full px-7 py-3 text-sm font-semibold"
+            >
+              Falar no WhatsApp
             </a>
-            <a href="#localizacao" className="transition-colors hover:text-sheila">
-              Contato
-            </a>
-          </nav>
-          <a
-            href={wa(MSG_VISITA)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-base btn-primary justify-self-end rounded-full px-7 py-3 text-sm font-semibold"
-          >
-            Falar no WhatsApp
-          </a>
+          </div>
         </div>
-      </div>
-
+      </header>
 
       {/* 1. Hero */}
-      <header id="top" className="sticky top-0 z-0 bg-pink/25">
+      <section className="bg-pink/25">
         <div className="mx-auto max-w-7xl px-5 pt-36 md:px-8 md:pt-40">
           <div className="grid items-center gap-10 pb-16 lg:grid-cols-2 lg:gap-16 lg:pb-24">
             {/* Left column: text + CTAs */}
@@ -309,11 +310,10 @@ function LojaPage() {
             </div>
           </div>
         </div>
-      </header>
-
+      </section>
 
       {/* 3. Benefícios */}
-      <section className="relative z-10 bg-background py-16">
+      <section className="bg-background py-16">
         <div className="mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-2 lg:grid-cols-4">
           {beneficios.map((b) => (
             <div
