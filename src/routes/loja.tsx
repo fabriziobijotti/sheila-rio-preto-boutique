@@ -339,7 +339,7 @@ function LojaPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
           <div className="grid grid-cols-2 gap-4">
             <img
-              src={provador}
+              src={provador.url}
               alt="Atendente ajudando cliente a escolher um vestido no provador"
               width={1408}
               height={1008}
