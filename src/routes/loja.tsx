@@ -444,8 +444,8 @@ function LojaPage() {
       <section id="presente" className="bg-pink py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
           <img
-            src={miniBolsasStudio.url}
-            alt="Mini Bolsas exclusivas da Primavera-Verão na Sheila Oliveira Store"
+            src={bolsasClarasHorizontal.url}
+            alt="Mini Bolsas claras exclusivas da Primavera-Verão na Sheila Oliveira Store"
             width={1200}
             height={1200}
             loading="eager"
