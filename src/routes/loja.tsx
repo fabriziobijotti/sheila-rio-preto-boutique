@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
 
+import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-real.png.asset.json";
 import vitrineManequins from "@/assets/vitrine-manequins.png.asset.json";
 import provador from "@/assets/provador.jpg";
@@ -14,6 +15,16 @@ import lookVersatil from "@/assets/look-versatil.png.asset.json";
 import { loja, wa } from "@/lib/loja-config";
 import mapaPreview from "@/assets/mapa-localizacao.jpg";
 import sheilaLogo from "@/assets/sheila-logo.png.asset.json";
+
+function trackConversion(label: string) {
+  try {
+    // @ts-expect-error gtag may be available via Google Tag Manager
+    window.gtag?.("event", "conversion", { event_label: label });
+  } catch {
+    // noop
+  }
+}
+
 
 const TITLE = "Loja Física de Moda Feminina em São José do Rio Preto | Sheila Oliveira Store";
 const DESC =
