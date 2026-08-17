@@ -344,7 +344,6 @@ function LojaPage() {
                   className="shadow-card"
                   onClick={() => trackConversion("cta_avisar_indo")}
                 >
-                  <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
                   Avisar que Estou Indo no WhatsApp
                 </WhatsAppButton>
               </div>
