@@ -6,7 +6,7 @@ import fachada from "@/assets/fachada-storefront.jpg.asset.json";
 import lojaInterno from "@/assets/vitrine-manequins-2.jpg.asset.json";
 import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
 import provador from "@/assets/loja-interno-provador.jpg.asset.json";
-import vitrineManequins from "@/assets/vitrine-manequins.jpeg.asset.json";
+import vitrineManequins from "@/assets/loja-interno-3.jpg.asset.json";
 import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
 import bolsasClarasHorizontal from "@/assets/bolsas_claras_horizontal.jpg.asset.json";
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
