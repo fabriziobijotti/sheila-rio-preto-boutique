@@ -13,6 +13,7 @@ import lookCasual from "@/assets/look-casual.png.asset.json";
 import lookVersatil from "@/assets/look-versatil.png.asset.json";
 import { loja, wa } from "@/lib/loja-config";
 import mapaPreview from "@/assets/mapa-localizacao.jpg";
+import sheilaLogo from "@/assets/sheila-logo.png.asset.json";
 
 const TITLE = "Loja Física de Moda Feminina em São José do Rio Preto | Sheila Oliveira Store";
 const DESC =
