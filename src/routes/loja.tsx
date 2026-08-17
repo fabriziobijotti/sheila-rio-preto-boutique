@@ -358,7 +358,7 @@ function LojaPage() {
             />
             <img
               src={vitrineManequins.url}
-              alt="Vitrine da Sheila Oliveira Store com manequins e looks da nova coleção em São José do Rio Preto"
+              alt="Interior da Sheila Oliveira Store com araras, lustre e bolsas em exposição"
               width={1408}
               height={1008}
               loading="eager"
