@@ -536,6 +536,10 @@ function LojaPage() {
               Praça Shopping e Hospital Santa Helena). Fácil acesso e estacionamento
               próximo para você provar com calma.
             </address>
+            <p id="horario" className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
+              <Clock className="h-4 w-4 text-sheila" aria-hidden="true" strokeWidth={1.5} />
+              {loja.horario}
+            </p>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <img
