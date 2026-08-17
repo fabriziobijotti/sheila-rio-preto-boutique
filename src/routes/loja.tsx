@@ -347,8 +347,8 @@ function LojaPage() {
               className="col-span-2 aspect-[4/3] w-full rounded-4xl object-cover shadow-card"
             />
             <img
-              src={lojaInterno.url}
-              alt="Interior da Sheila Oliveira Store com araras de roupas femininas e bolsas em São José do Rio Preto"
+              src={lojaInterno2.url}
+              alt="Interior da Sheila Oliveira Store com araras de roupas femininas e atendimento consultivo em São José do Rio Preto"
               width={1600}
               height={1200}
               loading="eager"
