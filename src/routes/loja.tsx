@@ -223,7 +223,7 @@ function LojaPage() {
 
 
       {/* 1. Hero */}
-      <header id="top" className="bg-pink/25">
+      <header id="top" className="sticky top-0 z-0 bg-pink/25">
         <div className="mx-auto max-w-7xl px-5 pt-36 md:px-8 md:pt-40">
           <div className="grid items-center gap-10 pb-16 lg:grid-cols-2 lg:gap-16 lg:pb-24">
             {/* Left column: text + CTAs */}
