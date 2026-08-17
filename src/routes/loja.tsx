@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
+import { Clock, Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
 
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-storefront.jpg.asset.json";
