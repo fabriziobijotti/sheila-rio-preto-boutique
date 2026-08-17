@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
 
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import fachada from "@/assets/fachada-real.png.asset.json";
+import fachada from "@/assets/fachada-storefront.jpg.asset.json";
 import lojaInterno from "@/assets/loja-interno.jpeg.asset.json";
 import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
 import provador from "@/assets/provador.jpg";
