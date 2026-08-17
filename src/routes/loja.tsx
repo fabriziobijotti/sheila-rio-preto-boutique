@@ -233,65 +233,42 @@ function LojaPage() {
             {/* Left column: text + CTAs */}
             <div className="animate-[fade-up_1s_ease-out_both] motion-reduce:animate-none">
               <span className="inline-flex items-center rounded-full bg-background/70 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                Coleção Primavera–Verão
+                LOJA FÍSICA EM SÃO JOSÉ DO RIO PRETO • DESDE 2014
               </span>
               <h1 className="mt-6 font-serif text-4xl font-light leading-[1.08] text-foreground sm:text-5xl lg:text-6xl">
-                A nova estação começa com você
+                Prove antes. Sinta o caimento. Leve com total certeza.
               </h1>
 
-              {/* Gift seal */}
-              <a
-                href={wa(MSG_PRESENTE)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group mt-6 inline-flex transition-transform hover:-translate-y-0.5"
-                onClick={() => trackConversion("selo_presente")}
-              >
-                <span className="inline-flex items-center gap-3 rounded-full bg-primary px-4 py-2.5 text-primary-foreground shadow-[var(--shadow-elegant)] ring-1 ring-primary/20 ring-offset-2 ring-offset-background animate-[selo-pulse_2.8s_ease-in-out_infinite] motion-reduce:animate-none">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/20">
-                    <Gift
-                      className="h-5 w-5"
-                      aria-hidden="true"
-                      strokeWidth={1.5}
-                    />
-                  </span>
-                  <span className="text-left">
-                    <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.18em]">
-                      Presente
-                    </span>
-                    <span className="font-serif text-base">
-                      Mini Bolsa exclusiva
-                    </span>
-                  </span>
-                </span>
-              </a>
-
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-foreground/80">
-                Descubra looks frescos, leves e elegantes na nossa Coleção
-                Primavera–Verão. Cada peça foi escolhida para valorizar seu corpo
-                e acompanhar seus dias com sofisticação.
+                Nada substitui experimentar no seu corpo. Venha conhecer a Sheila
+                Oliveira Store na Bernardino de Campos e receba atendimento
+                consultivo para encontrar peças que realmente valorizam você.
               </p>
-              <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground">
-                Na Sheila Oliveira Store, em São José do Rio Preto, você
-                experimenta no provador, recebe atendimento consultivo e sai com
-                peças que realmente vestem bem.
+
+              <p className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
+                Rua Bernardino de Campos, 3465 - Loja 1 (Centro / SJRP)
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="#colecao"
+                  href={loja.maps.rota}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-base btn-primary shadow-soft"
-                  onClick={() => trackConversion("cta_conhecer_colecao")}
+                  onClick={() => trackConversion("cta_tracar_rota")}
                 >
-                  Conhecer a coleção
+                  <MapPin className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+                  Traçar Rota no Google Maps
                 </a>
                 <WhatsAppButton
-                  mensagem={MSG_VISITA}
+                  mensagem="Olá! Estou indo visitar a Sheila Oliveira Store. Pode me confirmar o horário de atendimento e disponibilidade de provador?"
                   variant="outline"
                   className="shadow-card"
-                  onClick={() => trackConversion("cta_falar_consultora")}
+                  onClick={() => trackConversion("cta_avisar_indo")}
                 >
-                  Falar com uma consultora
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+                  Avisar que Estou Indo no WhatsApp
                 </WhatsAppButton>
               </div>
             </div>
