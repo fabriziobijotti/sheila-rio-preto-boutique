@@ -5,7 +5,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-real.png.asset.json";
 import lojaInterno from "@/assets/loja-interno.jpeg.asset.json";
 import provador from "@/assets/provador.jpg";
-import araras from "@/assets/araras.jpg";
+import vitrineManequins from "@/assets/vitrine-manequins.jpeg.asset.json";
 import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
 import conjuntoAmarelo from "@/assets/conjunto-amarelo.png.asset.json";
