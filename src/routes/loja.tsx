@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
+import { Clock, Coffee, Gift, MapPin, Menu, MessageCircle, Shirt, Sun, X } from "lucide-react";
 
+import { cn } from "@/lib/utils";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-storefront.jpg.asset.json";
 import lojaInterno from "@/assets/vitrine-manequins-2.jpg.asset.json";
@@ -167,64 +169,139 @@ const faq = [
   },
 ];
 
-function LojaPage() {
+const navLinks = [
+  { href: "#colecao", label: "Coleção" },
+  { href: "#presente", label: "Novidades" },
+  { href: "#localizacao", label: "Localização" },
+  { href: "#horario", label: "Horário" },
+];
+
+function HeaderNav() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const check = () => setScrolled(window.scrollY > 24);
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    return () => window.removeEventListener("scroll", check);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background">
-      {/* 0. Barra de aviso + navegação — sticky no topo */}
-      <header id="top" className="sticky top-0 z-50 shadow-card">
-        <div className="bg-sheila text-cream">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 py-2.5 text-center text-[0.8rem]">
-            <Gift className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
-            <p>
-              <strong className="font-semibold">PRESENTÃO:</strong> nas compras a partir
-              de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.
-            </p>
-            <a
-              href="#colecao"
-              className="rounded-full border border-cream/70 px-4 py-1 text-xs transition-colors hover:bg-cream hover:text-sheila"
-            >
-              Ver coleção
-            </a>
-          </div>
-        </div>
-        <div className="bg-blush">
-          <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-4">
-            <a href="#top" className="flex items-center">
-              <img
-                src={sheilaLogo.url}
-                alt="Sheila Oliveira Store"
-                width={550}
-                height={229}
-                loading="eager"
-                decoding="async"
-                className="h-14 w-auto sm:h-16"
-              />
-            </a>
-            <nav className="hidden items-center justify-center gap-10 text-sm text-ink md:flex">
-              <a href="#colecao" className="transition-colors hover:text-sheila">
-                Coleção
+    <>
+      <header
+        id="top"
+        className={cn(
+          "fixed inset-x-0 top-9 z-50 transition-all duration-500",
+          scrolled
+            ? "bg-background/85 shadow-[var(--shadow-soft)] backdrop-blur-md"
+            : "bg-transparent"
+        )}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+          <a href="#top" className="flex items-center">
+            <img
+              src={sheilaLogo.url}
+              alt="Sheila Oliveira Store"
+              width={550}
+              height={229}
+              loading="eager"
+              decoding="async"
+              className="h-10 w-auto md:h-12"
+            />
+          </a>
+
+          <nav className="hidden items-center gap-10 text-sm text-muted-foreground lg:flex">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-primary"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
               </a>
-              <a href="#presente" className="transition-colors hover:text-sheila">
-                Novidades
-              </a>
-              <a href="#localizacao" className="transition-colors hover:text-sheila">
-                Localização
-              </a>
-              <a href="#horario" className="transition-colors hover:text-sheila">
-                Horário
-              </a>
-            </nav>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
             <a
               href={wa(MSG_VISITA)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-base btn-primary justify-self-end rounded-full px-7 py-3 text-sm font-semibold"
+              className="btn-base btn-primary hidden rounded-full px-6 py-2.5 text-sm font-semibold sm:inline-flex"
             >
               Falar no WhatsApp
             </a>
+
+            <button
+              type="button"
+              aria-label={open ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-foreground transition-colors hover:bg-secondary lg:hidden"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
         </div>
       </header>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="fixed inset-x-0 top-[4.5rem] z-40 bg-background/95 backdrop-blur-md lg:hidden">
+          <nav className="mx-auto flex max-w-7xl flex-col px-5 py-4 md:px-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="rounded-xl px-4 py-3 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href={wa(MSG_VISITA)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-base btn-primary mt-4 w-full rounded-full py-3 text-sm font-semibold sm:hidden"
+              onClick={() => setOpen(false)}
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+              Falar no WhatsApp
+            </a>
+          </nav>
+        </div>
+      )}
+    </>
+  );
+}
+
+function LojaPage() {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* 0. Promo bar — fixed above the header */}
+      <div className="fixed inset-x-0 top-0 z-[60] h-9 bg-sheila text-cream">
+        <div className="mx-auto flex h-full max-w-7xl items-center justify-center gap-x-2 px-4 text-center text-xs sm:text-[0.8rem]">
+          <Gift className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
+          <p className="truncate whitespace-nowrap">
+            <strong className="font-semibold">PRESENTÃO:</strong>
+            <span className="hidden sm:inline"> nas compras a partir</span>
+            <span className="sm:hidden"> a partir</span>
+            <span> de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.</span>
+          </p>
+          <a
+            href="#colecao"
+            className="shrink-0 rounded-full border border-cream/70 px-3 py-0.5 text-[0.7rem] transition-colors hover:bg-cream hover:text-sheila sm:px-4 sm:text-xs"
+          >
+            Ver coleção
+          </a>
+        </div>
+      </div>
+
+      {/* 1. Fixed header — transparent at top, gains background on scroll */}
+      <HeaderNav />
 
       {/* 1. Hero */}
       <section className="bg-pink/25">
