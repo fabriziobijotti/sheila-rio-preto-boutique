@@ -265,15 +265,6 @@ function LojaPage() {
               height={1200}
               className="aspect-[4/5] w-full rounded-4xl object-cover shadow-soft"
             />
-            <img
-              src={araras}
-              alt="Araras com peças da nova coleção na loja"
-              width={1408}
-              height={1008}
-              loading="eager"
-              decoding="async"
-              className="absolute -bottom-8 -left-4 block w-32 rounded-3xl border-4 border-cream object-cover shadow-card sm:w-44"
-            />
           </div>
         </div>
       </header>
