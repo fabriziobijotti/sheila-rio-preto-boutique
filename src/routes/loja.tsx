@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
 
 import fachada from "@/assets/fachada-real.png.asset.json";
 import vitrineManequins from "@/assets/vitrine-manequins.png.asset.json";
@@ -72,25 +73,25 @@ const MSG_PROVADOR =
 
 const beneficios = [
   {
-    icone: "👗",
+    icone: Shirt,
     titulo: "Provador & Caimento Real",
     texto:
       "Experimente modelos e tamanhos com calma, sem a frustração de errar compras pela internet.",
   },
   {
-    icone: "☕",
+    icone: Coffee,
     titulo: "Atendimento Consultivo",
     texto:
       "Nossa equipe ajuda você a combinar looks completos para o trabalho, dia a dia e ocasiões especiais.",
   },
   {
-    icone: "☀️",
+    icone: Sun,
     titulo: "Tecidos Leves para Rio Preto",
     texto:
       "Peças frescas, elegantes e confortáveis pensadas para o clima da nossa cidade.",
   },
   {
-    icone: "🎁",
+    icone: Gift,
     titulo: "Presentão na Loja",
     texto:
       "Faça suas compras a partir de R$ 250 na loja física e leve sua Mini Bolsa exclusiva na hora para completar suas produções.",
@@ -158,7 +159,7 @@ function LojaPage() {
       {/* 0. Barra de aviso + navegação */}
       <div className="bg-sheila text-cream">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 py-2.5 text-center text-[0.8rem]">
-          <span aria-hidden="true">🎁</span>
+          <Gift className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
           <p>
             <strong className="font-semibold">PRESENTÃO:</strong> nas compras a partir
             de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.
@@ -232,7 +233,7 @@ function LojaPage() {
               encontrar peças que realmente valorizam você.
             </p>
             <p className="mt-6 inline-flex items-start gap-2 rounded-2xl bg-blush px-4 py-3 text-sm text-ink">
-              <span aria-hidden="true">📍</span>
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sheila" aria-hidden="true" strokeWidth={1.5} />
               <span>Rua Bernardino de Campos, 3465 - Loja 1 (Centro / SJRP)</span>
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -242,7 +243,8 @@ function LojaPage() {
                 rel="noopener noreferrer"
                 className="btn-base btn-primary"
               >
-                📍 Traçar Rota no Google Maps
+                <MapPin className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+                Traçar Rota no Google Maps
               </a>
               <a
                 href={wa(MSG_VISITA)}
@@ -250,7 +252,8 @@ function LojaPage() {
                 rel="noopener noreferrer"
                 className="btn-base btn-outline"
               >
-                💬 Avisar que Estou Indo no WhatsApp
+                <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+                Avisar que Estou Indo no WhatsApp
               </a>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
@@ -278,9 +281,7 @@ function LojaPage() {
               className="overflow-hidden rounded-3xl border border-border bg-card p-0 shadow-card"
             >
               <div className="p-6 pb-0">
-                <span className="text-2xl" aria-hidden="true">
-                  {b.icone}
-                </span>
+                <b.icone className="h-7 w-7 text-sheila" aria-hidden="true" strokeWidth={1.5} />
               </div>
               <div className="p-6 pt-4">
                 <h3 className="text-xl text-ink">{b.titulo}</h3>
@@ -431,7 +432,8 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base btn-primary mt-7"
             >
-              🎁 Quero garantir meu presente
+              <Gift className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+              Quero garantir meu presente
             </a>
             <p className="mt-4 text-xs leading-relaxed text-ink/60">
               Brinde sujeito à disponibilidade de estoque. Confirme antes de visitar a loja
@@ -485,7 +487,7 @@ function LojaPage() {
             </h2>
             <address className="mt-5 not-italic text-[0.98rem] leading-relaxed text-muted-foreground">
               <span className="block font-medium text-ink">{loja.nome}</span>
-              📍 Rua Bernardino de Campos, 3465 - Loja 1 (Centro / SJRP — Próximo ao
+              <MapPin className="mr-1 inline h-4 w-4 align-[-3px] text-sheila" aria-hidden="true" strokeWidth={1.5} /> Rua Bernardino de Campos, 3465 - Loja 1 (Centro / SJRP — Próximo ao
               Praça Shopping e Hospital Santa Helena). Fácil acesso e estacionamento
               próximo para você provar com calma.
             </address>
@@ -516,7 +518,8 @@ function LojaPage() {
                  className="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />
               <span className="btn-base btn-primary absolute bottom-5 left-1/2 -translate-x-1/2 px-5 py-2.5 text-xs shadow-soft">
-                📍 Abrir no Google Maps
+                <MapPin className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+                Abrir no Google Maps
               </span>
             </a>
           </div>
@@ -527,7 +530,8 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base btn-primary w-full px-8 py-4 text-sm tracking-[0.12em] sm:w-auto"
             >
-              📍 Abrir Localização no GPS
+              <MapPin className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+              Abrir Localização no GPS
             </a>
             <a
               href={wa(MSG_VISITA)}
@@ -535,7 +539,8 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base btn-outline w-full sm:w-auto"
             >
-              💬 Avisar que estou indo pelo WhatsApp
+              <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+              Avisar que estou indo pelo WhatsApp
             </a>
           </div>
         </div>
@@ -561,7 +566,8 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base bg-card px-8 py-4 text-sheila hover:bg-cream"
             >
-              📍 Quero visitar a loja
+              <MapPin className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+              Quero visitar a loja
             </a>
             <a
               href={wa(MSG_LOOKS)}
@@ -569,7 +575,8 @@ function LojaPage() {
               rel="noopener noreferrer"
               className="btn-base btn-outline px-8 py-4"
             >
-              💬 Quero escolher pelo WhatsApp
+              <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+              Quero escolher pelo WhatsApp
             </a>
           </div>
           <p className="mt-6 text-xs leading-relaxed text-ink/60">
@@ -681,7 +688,7 @@ function LojaPage() {
         aria-label="Falar com a Sheila Oliveira Store pelo WhatsApp"
         className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-2xl text-primary-foreground shadow-soft transition-transform hover:scale-105"
       >
-        💬
+        <MessageCircle className="h-6 w-6" aria-hidden="true" strokeWidth={1.5} />
       </a>
     </div>
   );
