@@ -282,16 +282,18 @@ function LojaPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* 0. Promo bar — fixed above the header */}
-      <div className="fixed inset-x-0 top-0 z-[60] bg-sheila text-cream">
-        <div className="mx-auto flex h-9 max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 text-center text-[0.8rem]">
+      <div className="fixed inset-x-0 top-0 z-[60] h-9 bg-sheila text-cream">
+        <div className="mx-auto flex h-full max-w-7xl items-center justify-center gap-x-2 px-4 text-center text-xs sm:text-[0.8rem]">
           <Gift className="h-4 w-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
-          <p>
-            <strong className="font-semibold">PRESENTÃO:</strong> nas compras a partir
-            de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.
+          <p className="truncate whitespace-nowrap">
+            <strong className="font-semibold">PRESENTÃO:</strong>
+            <span className="hidden sm:inline"> nas compras a partir</span>
+            <span className="sm:hidden"> a partir</span>
+            <span> de {loja.campanha.valorMinimo}, ganhe uma Mini Bolsa exclusiva.</span>
           </p>
           <a
             href="#colecao"
-            className="rounded-full border border-cream/70 px-4 py-1 text-xs transition-colors hover:bg-cream hover:text-sheila"
+            className="shrink-0 rounded-full border border-cream/70 px-3 py-0.5 text-[0.7rem] transition-colors hover:bg-cream hover:text-sheila sm:px-4 sm:text-xs"
           >
             Ver coleção
           </a>
