@@ -346,8 +346,8 @@ function LojaPage() {
               className="col-span-2 aspect-[4/3] w-full rounded-4xl object-cover shadow-card"
             />
             <img
-              src={vitrineManequins.url}
-              alt="Vitrine da Sheila Oliveira Store com manequins e looks da coleção"
+              src={lojaInterno.url}
+              alt="Interior da Sheila Oliveira Store com araras de roupas femininas e bolsas em São José do Rio Preto"
               width={1600}
               height={1200}
               loading="eager"
