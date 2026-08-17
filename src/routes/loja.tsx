@@ -304,7 +304,7 @@ function LojaPage() {
       <HeaderNav />
 
       {/* 1. Hero */}
-      <section className="bg-pink/25">
+      <section className="bg-[#fce2e4]">
         <div className="mx-auto max-w-7xl px-5 pt-36 md:px-8 md:pt-40">
           <div className="grid items-center gap-10 pb-16 lg:grid-cols-2 lg:gap-16 lg:pb-24">
             {/* Left column: text + CTAs */}
