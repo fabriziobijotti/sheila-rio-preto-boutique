@@ -3,7 +3,7 @@ import { Coffee, Gift, MapPin, MessageCircle, Shirt, Sun } from "lucide-react";
 
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import fachada from "@/assets/fachada-storefront.jpg.asset.json";
-import lojaInterno from "@/assets/loja-interno.jpeg.asset.json";
+import lojaInterno from "@/assets/vitrine-manequins-2.jpg.asset.json";
 import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
 import provador from "@/assets/loja-interno-provador.jpg.asset.json";
 import vitrineManequins from "@/assets/vitrine-manequins.jpeg.asset.json";
