@@ -391,50 +391,52 @@ function LojaPage() {
       </section>
 
       {/* 5. Nova coleção */}
-      <section id="colecao" className="bg-[#f7f0d1] mx-auto max-w-6xl px-4 py-20">
-        <div className="max-w-2xl">
-          <p className="eyebrow">Nova coleção</p>
-          <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
-            A Primavera-Verão chegou à Sheila
-          </h2>
-          <p className="mt-4 text-[0.98rem] leading-relaxed text-muted-foreground">
-            Cores, tecidos e produções pensadas para acompanhar você nos dias mais
-            leves da estação.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {categorias.map((c) => (
-            <article
-              key={c.nome}
-              className="overflow-hidden rounded-4xl border border-border bg-card shadow-card"
-            >
-              <img
-                src={c.img}
-                alt={`${c.nome} da coleção Primavera-Verão na Sheila Oliveira Store`}
-                width={1008}
-                height={1312}
-                loading="eager"
-                decoding="async"
-                className="aspect-[4/5] w-full object-cover"
-              />
-              <div className="flex min-w-0 flex-col items-stretch gap-3 p-5">
-                <h3 className="max-w-none overflow-visible whitespace-normal break-normal text-clip text-xl leading-snug text-ink lg:text-2xl">
-                  {c.nome}
-                </h3>
-                <a
-                  href={wa(c.msg)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-base btn-outline w-full px-4 py-2.5 text-center text-xs"
-                >
-                  Provar na loja
-                </a>
-
-              </div>
-            </article>
-          ))}
+      <section id="colecao" className="bg-butter py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Nova coleção</p>
+            <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
+              A Primavera-Verão chegou à Sheila
+            </h2>
+            <p className="mt-4 text-[0.98rem] leading-relaxed text-muted-foreground">
+              Cores, tecidos e produções pensadas para acompanhar você nos dias
+              mais leves da estação.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {categorias.map((c) => (
+              <article
+                key={c.nome}
+                className="overflow-hidden rounded-4xl border border-border bg-card shadow-card"
+              >
+                <img
+                  src={c.img}
+                  alt={`${c.nome} da coleção Primavera-Verão na Sheila Oliveira Store`}
+                  width={1008}
+                  height={1312}
+                  loading="eager"
+                  decoding="async"
+                  className="aspect-[4/5] w-full object-cover"
+                />
+                <div className="flex min-w-0 flex-col items-stretch gap-3 p-5">
+                  <h3 className="max-w-none overflow-visible whitespace-normal break-normal text-clip text-xl leading-snug text-ink lg:text-2xl">
+                    {c.nome}
+                  </h3>
+                  <a
+                    href={wa(c.msg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-base btn-outline w-full px-4 py-2.5 text-center text-xs"
+                  >
+                    Provar na loja
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
+
 
       {/* 6. Presentão */}
       <section id="presente" className="bg-pink py-16">
