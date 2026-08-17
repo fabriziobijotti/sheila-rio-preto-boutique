@@ -8,6 +8,7 @@ import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
 import provador from "@/assets/provador.jpg";
 import vitrineManequins from "@/assets/vitrine-manequins.jpeg.asset.json";
 import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
+import bolsasClarasHorizontal from "@/assets/bolsas_claras_horizontal.jpg.asset.json";
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
 import conjuntoAmarelo from "@/assets/conjunto-amarelo.png.asset.json";
 import blusaPoas from "@/assets/blusa-poas.png.asset.json";
