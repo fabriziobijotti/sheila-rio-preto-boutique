@@ -542,7 +542,7 @@ function LojaPage() {
               height={1200}
               loading="eager"
               decoding="async"
-              className="aspect-[4/3] w-full rounded-4xl object-cover shadow-card"
+              className="aspect-[4/3] w-full rounded-4xl object-cover object-top shadow-card"
             />
             <a
               href={loja.maps.search}
