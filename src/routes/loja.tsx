@@ -274,23 +274,11 @@ function LojaPage() {
               key={b.titulo}
               className="overflow-hidden rounded-3xl border border-border bg-card p-0 shadow-card"
             >
-              {b.img ? (
-                <img
-                  src={b.img}
-                  alt="Mini Bolsas exclusivas da Primavera-Verão na Sheila Oliveira Store"
-                  width={800}
-                  height={600}
-                  loading="eager"
-                  decoding="async"
-                  className="aspect-[4/3] w-full object-cover"
-                />
-              ) : (
-                <div className="p-6 pb-0">
-                  <span className="text-2xl" aria-hidden="true">
-                    {b.icone}
-                  </span>
-                </div>
-              )}
+              <div className="p-6 pb-0">
+                <span className="text-2xl" aria-hidden="true">
+                  {b.icone}
+                </span>
+              </div>
               <div className="p-6 pt-4">
                 <h3 className="text-xl text-ink">{b.titulo}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
