@@ -169,6 +169,115 @@ const faq = [
   },
 ];
 
+const navLinks = [
+  { href: "#colecao", label: "Coleção" },
+  { href: "#presente", label: "Novidades" },
+  { href: "#localizacao", label: "Localização" },
+  { href: "#horario", label: "Horário" },
+];
+
+function HeaderNav() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const check = () => setScrolled(window.scrollY > 24);
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    return () => window.removeEventListener("scroll", check);
+  }, []);
+
+  return (
+    <>
+      <header
+        id="top"
+        className={cn(
+          "fixed inset-x-0 top-9 z-50 transition-all duration-500",
+          scrolled
+            ? "bg-background/85 shadow-[var(--shadow-soft)] backdrop-blur-md"
+            : "bg-transparent"
+        )}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+          <a href="#top" className="flex items-center">
+            <img
+              src={sheilaLogo.url}
+              alt="Sheila Oliveira Store"
+              width={550}
+              height={229}
+              loading="eager"
+              decoding="async"
+              className="h-10 w-auto md:h-12"
+            />
+          </a>
+
+          <nav className="hidden items-center gap-10 text-sm text-muted-foreground lg:flex">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-primary"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <a
+              href={wa(MSG_VISITA)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-base btn-primary hidden rounded-full px-6 py-2.5 text-sm font-semibold sm:inline-flex"
+            >
+              Falar no WhatsApp
+            </a>
+
+            <button
+              type="button"
+              aria-label={open ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-foreground transition-colors hover:bg-secondary lg:hidden"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="fixed inset-x-0 top-[4.5rem] z-40 bg-background/95 backdrop-blur-md lg:hidden">
+          <nav className="mx-auto flex max-w-7xl flex-col px-5 py-4 md:px-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="rounded-xl px-4 py-3 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href={wa(MSG_VISITA)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-base btn-primary mt-4 w-full rounded-full py-3 text-sm font-semibold sm:hidden"
+              onClick={() => setOpen(false)}
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
+              Falar no WhatsApp
+            </a>
+          </nav>
+        </div>
+      )}
+    </>
+  );
+}
+
 function LojaPage() {
   return (
     <div className="min-h-screen bg-background">
