@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ElementType, type ReactNode } from "react";
 
 interface RevealProps {
   children: ReactNode;
@@ -61,9 +61,11 @@ export function Reveal({
 
   const isVisible = !hasMounted || prefersReducedMotion || isRevealed;
 
+  const Comp = Component as ElementType;
+
   return (
-    <Component
-      ref={ref as React.RefObject<HTMLDivElement>}
+    <Comp
+      ref={ref}
       className={cn(
         "will-change-transform",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
@@ -77,6 +79,7 @@ export function Reveal({
       }}
     >
       {children}
-    </Component>
+    </Comp>
   );
 }
+
