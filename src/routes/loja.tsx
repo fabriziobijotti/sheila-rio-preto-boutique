@@ -656,6 +656,7 @@ function LojaPage() {
       {/* 10. CTA final */}
       <section className="bg-mint-soft py-20 text-ink">
         <div className="mx-auto max-w-3xl px-4 text-center">
+          <Reveal>
           <h2 className="text-3xl leading-tight sm:text-4xl">
             Sua próxima produção pode estar esperando por você na Sheila
           </h2>
@@ -663,6 +664,8 @@ function LojaPage() {
             Venha experimentar a nova Coleção Primavera-Verão ou fale com nossa equipe
             para descobrir os modelos disponíveis.
           </p>
+          </Reveal>
+          <Reveal delay={120}>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <a
               href={loja.maps.rota}
@@ -687,7 +690,9 @@ function LojaPage() {
             Compras a partir de {loja.campanha.valorMinimo} ainda garantem uma Mini
             Bolsa exclusiva, enquanto durarem os estoques.
           </p>
+          </Reveal>
         </div>
+
       </section>
 
       {/* 11. FAQ */}
