@@ -501,6 +501,7 @@ function LojaPage() {
       {/* 6. Presentão */}
       <section id="presente" className="bg-pink py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
+          <Reveal>
           <img
             src={bolsasClarasHorizontal.url}
             alt="Mini Bolsas claras exclusivas da Primavera-Verão na Sheila Oliveira Store"
@@ -510,6 +511,8 @@ function LojaPage() {
             decoding="async"
             className="aspect-[4/3] w-full rounded-4xl object-cover object-center shadow-soft"
           />
+          </Reveal>
+          <Reveal delay={120}>
           <div>
             <p className="eyebrow">Presentão Primavera-Verão</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -541,6 +544,8 @@ function LojaPage() {
               {loja.campanha.periodo ? ` ${loja.campanha.periodo}.` : ""}
             </p>
           </div>
+          </Reveal>
+
         </div>
       </section>
 
