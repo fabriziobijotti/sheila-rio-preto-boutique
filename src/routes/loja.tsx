@@ -721,6 +721,7 @@ function LojaPage() {
       {/* 12. Rodapé */}
       <footer className="border-t border-border bg-secondary py-14">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-3">
+          <Reveal>
           <div>
             <h3 className="text-2xl text-ink">{loja.nome}</h3>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -751,7 +752,9 @@ function LojaPage() {
               </a>
             </nav>
           </div>
+          </Reveal>
 
+          <Reveal delay={120}>
           <div>
             <p className="eyebrow">Visite a loja</p>
             <address className="mt-4 not-italic text-sm leading-relaxed text-muted-foreground">
@@ -768,7 +771,9 @@ function LojaPage() {
               Ver localização
             </a>
           </div>
+          </Reveal>
 
+          <Reveal delay={240}>
           <img
             src={fachada.url}
             alt="Fachada da Sheila Oliveira Store"
@@ -778,7 +783,9 @@ function LojaPage() {
             decoding="async"
             className="aspect-[4/3] w-full rounded-3xl object-cover object-top shadow-card"
           />
+          </Reveal>
         </div>
+
         <p className="mx-auto mt-10 max-w-6xl px-4 text-xs text-muted-foreground">
           © {new Date().getFullYear()} {loja.nome} — São José do Rio Preto/SP.
         </p>
