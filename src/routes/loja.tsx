@@ -14,7 +14,7 @@ import bolsasClarasHorizontal from "@/assets/bolsas_claras_horizontal.jpg.asset.
 import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
 import vestidoPoas from "@/assets/vestido-poas.png.asset.json";
 import conjuntoAmarelo from "@/assets/conjunto-amarelo-novo.png.asset.json";
-import blusaPoas from "@/assets/blusa-poas.png.asset.json";
+import blusaPoas from "@/assets/blusa-rosa.png.asset.json";
 import lookCasual from "@/assets/look-casual.png.asset.json";
 import lookVersatil from "@/assets/look-versatil.png.asset.json";
 import { loja, wa } from "@/lib/loja-config";
