@@ -547,6 +547,7 @@ function LojaPage() {
       {/* 7. Entrega local */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-3xl px-4 text-center">
+        <Reveal>
         <p className="eyebrow">Entrega local</p>
         <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
           Não está em Rio Preto? A Sheila pode chegar até você.
@@ -556,6 +557,8 @@ function LojaPage() {
           com nossa equipe pelo WhatsApp, veja os modelos disponíveis e consulte a
           entrega para sua cidade.
         </p>
+        </Reveal>
+        <Reveal delay={120}>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <a
             href={wa(MSG_ENTREGA)}
@@ -574,7 +577,9 @@ function LojaPage() {
             Quero ver os looks disponíveis
           </a>
         </div>
+        </Reveal>
         </div>
+
       </section>
 
       {/* 8. Localização */}
