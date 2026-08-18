@@ -453,6 +453,7 @@ function LojaPage() {
       {/* 5. Nova coleção */}
       <section id="colecao" className="bg-butter py-20">
         <div className="mx-auto max-w-6xl px-4">
+          <Reveal>
           <div className="max-w-2xl">
             <p className="eyebrow">Nova coleção</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -463,11 +464,12 @@ function LojaPage() {
               mais leves da estação.
             </p>
           </div>
+          </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {categorias.map((c) => (
+            {categorias.map((c, i) => (
+              <Reveal key={c.nome} delay={Math.min(i * 100, 360)}>
               <article
-                key={c.nome}
-                className="overflow-hidden rounded-4xl border border-border bg-card shadow-card"
+                className="h-full overflow-hidden rounded-4xl border border-border bg-card shadow-card"
               >
                 <img
                   src={c.img}
@@ -492,8 +494,10 @@ function LojaPage() {
                   </a>
                 </div>
               </article>
+              </Reveal>
             ))}
           </div>
+
         </div>
       </section>
 
