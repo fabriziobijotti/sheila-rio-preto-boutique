@@ -16,7 +16,7 @@ import vestidoPoas from "@/assets/vestido-poas.png.asset.json";
 import conjuntoAmarelo from "@/assets/conjunto-amarelo-novo.png.asset.json";
 import blusaPoas from "@/assets/blusa-rosa.png.asset.json";
 import lookCasual from "@/assets/calcas-poas.png.asset.json";
-import lookVersatil from "@/assets/look-versatil.png.asset.json";
+import lookVersatil from "@/assets/pecas-versateis.png.asset.json";
 import { loja, wa } from "@/lib/loja-config";
 import mapaPreview from "@/assets/mapa-localizacao.jpg";
 import sheilaLogo from "@/assets/sheila-logo.png.asset.json";
