@@ -173,8 +173,8 @@ const navLinks = [
   { href: "#colecao", label: "Coleção" },
   { href: "#presente", label: "Novidades" },
   { href: "#localizacao", label: "Localização" },
-  { href: "#horario", label: "Horário" },
 ];
+
 
 function HeaderNav() {
   const [scrolled, setScrolled] = useState(false);
