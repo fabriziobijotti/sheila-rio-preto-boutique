@@ -5,22 +5,22 @@ import { Clock, Coffee, Gift, MapPin, Menu, MessageCircle, Shirt, Sun, X } from 
 import { cn } from "@/lib/utils";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Reveal } from "@/components/reveal";
-import fachada from "@/assets/fachada-storefront.jpg.asset.json";
-import lojaInterno from "@/assets/vitrine-manequins-2.jpg.asset.json";
-import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
-import provador from "@/assets/loja-interno-provador.jpg.asset.json";
-import vitrineManequins from "@/assets/loja-interno-3.jpg.asset.json";
-import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg.asset.json";
-import bolsasClarasHorizontal from "@/assets/bolsas_claras_horizontal.jpg.asset.json";
-import vestidoAzul from "@/assets/vestido-azul.png.asset.json";
-import vestidoPoas from "@/assets/vestido-poas-novo.png.asset.json";
-import conjuntoAmarelo from "@/assets/conjunto-amarelo-novo.png.asset.json";
-import blusaPoas from "@/assets/blusa-rosa.png.asset.json";
-import lookCasual from "@/assets/calcas-poas.png.asset.json";
-import lookVersatil from "@/assets/pecas-versateis.png.asset.json";
+import fachada from "@/assets/fachada-storefront.jpg";
+import lojaInterno from "@/assets/vitrine-manequins-2.jpg";
+import lojaInterno2 from "@/assets/loja-interno-2.jpeg";
+import provador from "@/assets/loja-interno-provador.jpg";
+import vitrineManequins from "@/assets/loja-interno-3.jpg";
+import miniBolsasStudio from "@/assets/mini-bolsas-studio.jpg";
+import bolsasClarasHorizontal from "@/assets/bolsas_claras_horizontal.jpg";
+import vestidoAzul from "@/assets/vestido-azul.png";
+import vestidoPoas from "@/assets/vestido-poas-novo.png";
+import conjuntoAmarelo from "@/assets/conjunto-amarelo-novo.png";
+import blusaPoas from "@/assets/blusa-rosa.png";
+import lookCasual from "@/assets/calcas-poas.png";
+import lookVersatil from "@/assets/pecas-versateis.png";
 import { loja, wa } from "@/lib/loja-config";
 import mapaPreview from "@/assets/mapa-localizacao.jpg";
-import sheilaLogo from "@/assets/sheila-logo.png.asset.json";
+import sheilaLogo from "@/assets/sheila-logo.png";
 
 function trackConversion(label: string) {
   try {
@@ -119,28 +119,28 @@ const beneficios = [
 const categorias = [
   {
     nome: "Vestidos",
-    img: vestidoPoas.url,
+    img: vestidoPoas,
     msg: MSG_PROVADOR,
   },
   {
     nome: "Conjuntos",
-    img: conjuntoAmarelo.url,
+    img: conjuntoAmarelo,
     msg: MSG_PROVADOR,
   },
   {
     nome: "Blusas",
-    img: blusaPoas.url,
+    img: blusaPoas,
     msg: MSG_PROVADOR,
   },
   {
     nome: "Looks Casuais",
-    img: lookCasual.url,
+    img: lookCasual,
     msg: MSG_PROVADOR,
     pos: "object-[center_12%]",
   },
   {
     nome: "Peças Versáteis",
-    img: lookVersatil.url,
+    img: lookVersatil,
     msg: MSG_PROVADOR,
   },
 ];
@@ -204,7 +204,7 @@ function HeaderNav() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
           <a href="#top" className="flex items-center">
             <img
-              src={sheilaLogo.url}
+              src={sheilaLogo}
               alt="Sheila Oliveira Store"
               width={550}
               height={229}
@@ -357,7 +357,7 @@ function LojaPage() {
               <div className="absolute -inset-8 -z-10 hidden rounded-full bg-accent blur-2xl lg:block" />
               <div className="overflow-hidden rounded-[2rem] shadow-[var(--shadow-elegant)]">
                 <img
-                  src={lojaInterno.url}
+                  src={lojaInterno}
                   alt="Interior da Sheila Oliveira Store com araras de roupas femininas e bolsas em São José do Rio Preto"
                   width={1600}
                   height={1200}
@@ -401,7 +401,7 @@ function LojaPage() {
           <Reveal>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src={provador.url}
+              src={provador}
               alt="Atendente ajudando cliente a escolher um vestido no provador"
               width={1408}
               height={1008}
@@ -410,7 +410,7 @@ function LojaPage() {
               className="col-span-2 aspect-[4/3] w-full rounded-4xl object-cover shadow-card"
             />
             <img
-              src={lojaInterno2.url}
+              src={lojaInterno2}
               alt="Interior da Sheila Oliveira Store com araras de roupas femininas e atendimento consultivo em São José do Rio Preto"
               width={1600}
               height={1200}
@@ -419,7 +419,7 @@ function LojaPage() {
               className="aspect-square w-full rounded-3xl object-cover shadow-card"
             />
             <img
-              src={vitrineManequins.url}
+              src={vitrineManequins}
               alt="Interior da Sheila Oliveira Store com araras, lustre e bolsas em exposição"
               width={1408}
               height={1008}
@@ -515,7 +515,7 @@ function LojaPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
           <Reveal>
           <img
-            src={bolsasClarasHorizontal.url}
+            src={bolsasClarasHorizontal}
             alt="Mini Bolsas claras exclusivas da Primavera-Verão na Sheila Oliveira Store"
             width={1200}
             height={1200}
@@ -623,7 +623,7 @@ function LojaPage() {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <Reveal>
             <img
-              src={fachada.url}
+              src={fachada}
               alt="Fachada da Sheila Oliveira Store na Bernardino de Campos, 3465"
               width={1600}
               height={1200}
@@ -816,7 +816,7 @@ function LojaPage() {
 
           <Reveal delay={240}>
           <img
-            src={fachada.url}
+            src={fachada}
             alt="Fachada da Sheila Oliveira Store"
             width={1600}
             height={1200}
