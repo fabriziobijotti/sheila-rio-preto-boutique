@@ -336,7 +336,7 @@ function LojaPage() {
                   onClick={() => trackConversion("cta_tracar_rota")}
                 >
                   <MapPin className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
-                  Traçar Rota no Google Maps
+                  Como Chegar
                 </a>
                 <WhatsAppButton
                   mensagem="Olá! Estou indo visitar a Sheila Oliveira Store. Pode me confirmar o horário de atendimento e disponibilidade de provador?"
@@ -344,7 +344,7 @@ function LojaPage() {
                   className="shadow-card"
                   onClick={() => trackConversion("cta_avisar_indo")}
                 >
-                  Avisar que Estou Indo no WhatsApp
+                  Falar com a Loja
                 </WhatsAppButton>
               </div>
             </div>
