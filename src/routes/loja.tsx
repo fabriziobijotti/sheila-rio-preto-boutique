@@ -395,6 +395,7 @@ function LojaPage() {
       {/* 4. Por que visitar */}
       <section className="bg-pink py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
+          <Reveal>
           <div className="grid grid-cols-2 gap-4">
             <img
               src={provador.url}
@@ -424,6 +425,8 @@ function LojaPage() {
               className="aspect-square w-full rounded-3xl object-cover shadow-card"
             />
           </div>
+          </Reveal>
+          <Reveal delay={140}>
           <div>
             <p className="eyebrow">Por que visitar a loja</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -447,6 +450,8 @@ function LojaPage() {
               Quero visitar a loja física
             </a>
           </div>
+          </Reveal>
+
         </div>
       </section>
 
