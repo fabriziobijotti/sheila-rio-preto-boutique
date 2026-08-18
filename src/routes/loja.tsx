@@ -135,6 +135,7 @@ const categorias = [
     nome: "Looks Casuais",
     img: lookCasual.url,
     msg: MSG_PROVADOR,
+    pos: "object-[center_12%]",
   },
   {
     nome: "Peças Versáteis",
