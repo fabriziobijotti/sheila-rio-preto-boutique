@@ -4,6 +4,7 @@ import { Clock, Coffee, Gift, MapPin, Menu, MessageCircle, Shirt, Sun, X } from 
 
 import { cn } from "@/lib/utils";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { Reveal } from "@/components/reveal";
 import fachada from "@/assets/fachada-storefront.jpg.asset.json";
 import lojaInterno from "@/assets/vitrine-manequins-2.jpg.asset.json";
 import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
@@ -373,10 +374,10 @@ function LojaPage() {
       {/* 3. Benefícios */}
       <section className="bg-background py-16">
         <div className="mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-2 lg:grid-cols-4">
-          {beneficios.map((b) => (
+          {beneficios.map((b, i) => (
+            <Reveal key={b.titulo} delay={Math.min(i * 100, 360)} className="h-full">
             <div
-              key={b.titulo}
-              className="overflow-hidden rounded-3xl border border-border bg-card p-0 shadow-card"
+              className="h-full overflow-hidden rounded-3xl border border-border bg-card p-0 shadow-card"
             >
               <div className="p-6 pb-0">
                 <b.icone className="h-7 w-7 text-sheila" aria-hidden="true" strokeWidth={1.5} />
@@ -388,13 +389,16 @@ function LojaPage() {
                 </p>
               </div>
             </div>
+            </Reveal>
           ))}
+
         </div>
       </section>
 
       {/* 4. Por que visitar */}
       <section className="bg-pink py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
+          <Reveal>
           <div className="grid grid-cols-2 gap-4">
             <img
               src={provador.url}
@@ -424,6 +428,8 @@ function LojaPage() {
               className="aspect-square w-full rounded-3xl object-cover shadow-card"
             />
           </div>
+          </Reveal>
+          <Reveal delay={140}>
           <div>
             <p className="eyebrow">Por que visitar a loja</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -447,12 +453,15 @@ function LojaPage() {
               Quero visitar a loja física
             </a>
           </div>
+          </Reveal>
+
         </div>
       </section>
 
       {/* 5. Nova coleção */}
       <section id="colecao" className="bg-butter py-20">
         <div className="mx-auto max-w-6xl px-4">
+          <Reveal>
           <div className="max-w-2xl">
             <p className="eyebrow">Nova coleção</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -463,11 +472,12 @@ function LojaPage() {
               mais leves da estação.
             </p>
           </div>
+          </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {categorias.map((c) => (
+            {categorias.map((c, i) => (
+              <Reveal key={c.nome} delay={Math.min(i * 100, 360)}>
               <article
-                key={c.nome}
-                className="overflow-hidden rounded-4xl border border-border bg-card shadow-card"
+                className="h-full overflow-hidden rounded-4xl border border-border bg-card shadow-card"
               >
                 <img
                   src={c.img}
@@ -492,8 +502,10 @@ function LojaPage() {
                   </a>
                 </div>
               </article>
+              </Reveal>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -501,6 +513,7 @@ function LojaPage() {
       {/* 6. Presentão */}
       <section id="presente" className="bg-pink py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
+          <Reveal>
           <img
             src={bolsasClarasHorizontal.url}
             alt="Mini Bolsas claras exclusivas da Primavera-Verão na Sheila Oliveira Store"
@@ -510,6 +523,8 @@ function LojaPage() {
             decoding="async"
             className="aspect-[4/3] w-full rounded-4xl object-cover object-center shadow-soft"
           />
+          </Reveal>
+          <Reveal delay={120}>
           <div>
             <p className="eyebrow">Presentão Primavera-Verão</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -541,12 +556,15 @@ function LojaPage() {
               {loja.campanha.periodo ? ` ${loja.campanha.periodo}.` : ""}
             </p>
           </div>
+          </Reveal>
+
         </div>
       </section>
 
       {/* 7. Entrega local */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-3xl px-4 text-center">
+        <Reveal>
         <p className="eyebrow">Entrega local</p>
         <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
           Não está em Rio Preto? A Sheila pode chegar até você.
@@ -556,6 +574,8 @@ function LojaPage() {
           com nossa equipe pelo WhatsApp, veja os modelos disponíveis e consulte a
           entrega para sua cidade.
         </p>
+        </Reveal>
+        <Reveal delay={120}>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <a
             href={wa(MSG_ENTREGA)}
@@ -574,12 +594,15 @@ function LojaPage() {
             Quero ver os looks disponíveis
           </a>
         </div>
+        </Reveal>
         </div>
+
       </section>
 
       {/* 8. Localização */}
       <section id="localizacao" className="bg-blue py-16">
         <div className="mx-auto max-w-6xl px-4">
+          <Reveal>
           <div className="max-w-2xl">
             <p className="eyebrow">Localização</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -596,7 +619,9 @@ function LojaPage() {
               {loja.horario}
             </p>
           </div>
+          </Reveal>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <Reveal>
             <img
               src={fachada.url}
               alt="Fachada da Sheila Oliveira Store na Bernardino de Campos, 3465"
@@ -606,6 +631,8 @@ function LojaPage() {
               decoding="async"
               className="aspect-[4/3] w-full rounded-4xl object-cover object-top shadow-card"
             />
+            </Reveal>
+            <Reveal delay={120}>
             <a
               href={loja.maps.search}
               target="_blank"
@@ -626,7 +653,9 @@ function LojaPage() {
                 Abrir no Google Maps
               </span>
             </a>
+            </Reveal>
           </div>
+          <Reveal delay={180}>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href={loja.maps.rota}
@@ -647,6 +676,8 @@ function LojaPage() {
               Confirmar Minha Visita
             </a>
           </div>
+          </Reveal>
+
         </div>
       </section>
 
@@ -656,6 +687,7 @@ function LojaPage() {
       {/* 10. CTA final */}
       <section className="bg-mint-soft py-20 text-ink">
         <div className="mx-auto max-w-3xl px-4 text-center">
+          <Reveal>
           <h2 className="text-3xl leading-tight sm:text-4xl">
             Sua próxima produção pode estar esperando por você na Sheila
           </h2>
@@ -663,6 +695,8 @@ function LojaPage() {
             Venha experimentar a nova Coleção Primavera-Verão ou fale com nossa equipe
             para descobrir os modelos disponíveis.
           </p>
+          </Reveal>
+          <Reveal delay={120}>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <a
               href={loja.maps.rota}
@@ -687,19 +721,24 @@ function LojaPage() {
             Compras a partir de {loja.campanha.valorMinimo} ainda garantem uma Mini
             Bolsa exclusiva, enquanto durarem os estoques.
           </p>
+          </Reveal>
         </div>
+
       </section>
 
       {/* 11. FAQ */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-3xl px-4">
+        <Reveal>
         <p className="eyebrow text-center">Dúvidas frequentes</p>
         <h2 className="mt-4 text-center text-3xl leading-tight text-ink sm:text-4xl">
           Perguntas frequentes
         </h2>
+        </Reveal>
         <div className="mt-10 divide-y divide-border">
-          {faq.map((f) => (
-            <details key={f.q} className="group py-5">
+          {faq.map((f, i) => (
+            <Reveal key={f.q} delay={Math.min(i * 90, 360)}>
+            <details className="group py-5">
               <summary className="flex cursor-pointer items-start justify-between gap-4 font-serif text-xl text-ink marker:hidden [&::-webkit-details-marker]:hidden">
                 <span className="min-w-0">{f.q}</span>
                 <span
@@ -713,14 +752,17 @@ function LojaPage() {
                 {f.a}
               </p>
             </details>
+            </Reveal>
           ))}
         </div>
         </div>
+
       </section>
 
       {/* 12. Rodapé */}
       <footer className="border-t border-border bg-secondary py-14">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-3">
+          <Reveal>
           <div>
             <h3 className="text-2xl text-ink">{loja.nome}</h3>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -751,7 +793,9 @@ function LojaPage() {
               </a>
             </nav>
           </div>
+          </Reveal>
 
+          <Reveal delay={120}>
           <div>
             <p className="eyebrow">Visite a loja</p>
             <address className="mt-4 not-italic text-sm leading-relaxed text-muted-foreground">
@@ -768,7 +812,9 @@ function LojaPage() {
               Ver localização
             </a>
           </div>
+          </Reveal>
 
+          <Reveal delay={240}>
           <img
             src={fachada.url}
             alt="Fachada da Sheila Oliveira Store"
@@ -778,7 +824,9 @@ function LojaPage() {
             decoding="async"
             className="aspect-[4/3] w-full rounded-3xl object-cover object-top shadow-card"
           />
+          </Reveal>
         </div>
+
         <p className="mx-auto mt-10 max-w-6xl px-4 text-xs text-muted-foreground">
           © {new Date().getFullYear()} {loja.nome} — São José do Rio Preto/SP.
         </p>
