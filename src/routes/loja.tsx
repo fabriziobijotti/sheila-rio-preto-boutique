@@ -4,6 +4,7 @@ import { Clock, Coffee, Gift, MapPin, Menu, MessageCircle, Shirt, Sun, X } from 
 
 import { cn } from "@/lib/utils";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { Reveal } from "@/components/reveal";
 import fachada from "@/assets/fachada-storefront.jpg.asset.json";
 import lojaInterno from "@/assets/vitrine-manequins-2.jpg.asset.json";
 import lojaInterno2 from "@/assets/loja-interno-2.jpeg.asset.json";
