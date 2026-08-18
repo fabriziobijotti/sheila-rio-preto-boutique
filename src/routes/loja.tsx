@@ -476,7 +476,7 @@ function LojaPage() {
                   height={1312}
                   loading="eager"
                   decoding="async"
-                  className="aspect-[4/5] w-full object-cover"
+                  className={`aspect-[4/5] w-full object-cover ${c.pos ?? "object-center"}`}
                 />
                 <div className="flex min-w-0 flex-col items-stretch gap-3 p-5">
                   <h3 className="max-w-none overflow-visible whitespace-normal break-normal text-clip text-xl leading-snug text-ink lg:text-2xl">
