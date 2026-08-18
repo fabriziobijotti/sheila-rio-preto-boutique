@@ -580,6 +580,7 @@ function LojaPage() {
       {/* 8. Localização */}
       <section id="localizacao" className="bg-blue py-16">
         <div className="mx-auto max-w-6xl px-4">
+          <Reveal>
           <div className="max-w-2xl">
             <p className="eyebrow">Localização</p>
             <h2 className="mt-4 text-3xl leading-tight text-ink sm:text-4xl">
@@ -596,7 +597,9 @@ function LojaPage() {
               {loja.horario}
             </p>
           </div>
+          </Reveal>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <Reveal>
             <img
               src={fachada.url}
               alt="Fachada da Sheila Oliveira Store na Bernardino de Campos, 3465"
@@ -606,6 +609,8 @@ function LojaPage() {
               decoding="async"
               className="aspect-[4/3] w-full rounded-4xl object-cover object-top shadow-card"
             />
+            </Reveal>
+            <Reveal delay={120}>
             <a
               href={loja.maps.search}
               target="_blank"
@@ -626,7 +631,9 @@ function LojaPage() {
                 Abrir no Google Maps
               </span>
             </a>
+            </Reveal>
           </div>
+          <Reveal delay={180}>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href={loja.maps.rota}
@@ -647,6 +654,8 @@ function LojaPage() {
               Confirmar Minha Visita
             </a>
           </div>
+          </Reveal>
+
         </div>
       </section>
 
