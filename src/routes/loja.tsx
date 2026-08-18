@@ -642,7 +642,7 @@ function LojaPage() {
               className="btn-base btn-outline w-full sm:w-auto"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" strokeWidth={1.5} />
-              Avisar que estou indo pelo WhatsApp
+              Confirmar Minha Visita
             </a>
           </div>
         </div>
