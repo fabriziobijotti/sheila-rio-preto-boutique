@@ -693,13 +693,16 @@ function LojaPage() {
       {/* 11. FAQ */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-3xl px-4">
+        <Reveal>
         <p className="eyebrow text-center">Dúvidas frequentes</p>
         <h2 className="mt-4 text-center text-3xl leading-tight text-ink sm:text-4xl">
           Perguntas frequentes
         </h2>
+        </Reveal>
         <div className="mt-10 divide-y divide-border">
-          {faq.map((f) => (
-            <details key={f.q} className="group py-5">
+          {faq.map((f, i) => (
+            <Reveal key={f.q} delay={Math.min(i * 90, 360)}>
+            <details className="group py-5">
               <summary className="flex cursor-pointer items-start justify-between gap-4 font-serif text-xl text-ink marker:hidden [&::-webkit-details-marker]:hidden">
                 <span className="min-w-0">{f.q}</span>
                 <span
@@ -713,9 +716,11 @@ function LojaPage() {
                 {f.a}
               </p>
             </details>
+            </Reveal>
           ))}
         </div>
         </div>
+
       </section>
 
       {/* 12. Rodapé */}
