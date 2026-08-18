@@ -373,10 +373,10 @@ function LojaPage() {
       {/* 3. Benefícios */}
       <section className="bg-background py-16">
         <div className="mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-2 lg:grid-cols-4">
-          {beneficios.map((b) => (
+          {beneficios.map((b, i) => (
+            <Reveal key={b.titulo} delay={Math.min(i * 100, 360)} className="h-full">
             <div
-              key={b.titulo}
-              className="overflow-hidden rounded-3xl border border-border bg-card p-0 shadow-card"
+              className="h-full overflow-hidden rounded-3xl border border-border bg-card p-0 shadow-card"
             >
               <div className="p-6 pb-0">
                 <b.icone className="h-7 w-7 text-sheila" aria-hidden="true" strokeWidth={1.5} />
@@ -388,7 +388,9 @@ function LojaPage() {
                 </p>
               </div>
             </div>
+            </Reveal>
           ))}
+
         </div>
       </section>
 
